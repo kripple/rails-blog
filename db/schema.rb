@@ -17,12 +17,12 @@ ActiveRecord::Schema.define(version: 20151015033717) do
   enable_extension "plpgsql"
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.string   "date"
-    t.text     "blurb"
-    t.text     "body"
-    t.boolean  "published"
-    t.integer  "user_id"
+    t.string   "title",      null: false
+    t.string   "date",       null: false
+    t.text     "blurb",      null: false
+    t.text     "body",       null: false
+    t.boolean  "published",  null: false
+    t.string   "slug",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -35,13 +35,13 @@ ActiveRecord::Schema.define(version: 20151015033717) do
   end
 
   create_table "tags", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",            null: false
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
