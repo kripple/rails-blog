@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   post 'users/sessions' => 'user_sessions#create'
   delete 'logout' => 'user_sessions#destroy'
 
-  resources :posts, only: [:index, :show, :create, :update]
-  resources :tags, only: :show
+  resources :posts, only: [:new, :index, :show, :create, :update]
+  resources :tags, only: [:new, :create, :show]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
