@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  # root 'welcome#index'
+  # get 'blog' => 'post#index'
+  # get 'projects' => 'user#projects'
+  # get 'about' => 'user#about'
+  # resources :posts, only: [:index, :show, :update]
+  # resources :tags, only: [:index, :show, :update]
+
+
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
