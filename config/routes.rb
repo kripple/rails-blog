@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   root 'user#about'
   get 'projects' => 'user#projects'
 
