@@ -6,6 +6,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :url, null: false, unique: true
       t.string :source, null: false
       t.boolean :published, null: false
+      t.string :slug, null: false, index: true
 
       t.timestamps null: false
     end

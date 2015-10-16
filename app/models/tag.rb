@@ -1,6 +1,5 @@
 class Tag < ActiveRecord::Base
-	has_many :taggings
-	has_many :posts, through: :taggings
+	belongs_to :taggable, polymorphic: true
 
 	validates :name, :presence => true
   validates :name, :uniqueness => true
@@ -13,3 +12,5 @@ class Tag < ActiveRecord::Base
 		self.slug = self.name.parameterize
 	end
 end
+
+

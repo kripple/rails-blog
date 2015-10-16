@@ -6,7 +6,7 @@ class CreatePosts < ActiveRecord::Migration
       t.text :description, null: false
       t.text :body, null: false
       t.boolean :published, null: false
-      t.string :slug, null: false
+      t.string :slug, null: false, index: true
 
       t.timestamps null: false
     end

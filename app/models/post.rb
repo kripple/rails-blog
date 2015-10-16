@@ -1,6 +1,5 @@
 class Post < ActiveRecord::Base
-	has_many :taggings
-	has_many :tags, through: :taggings
+	has_many :tags, as: :taggable
 
 	validates :title, :date, :description, :body, :published, :presence => true
 	validates :title, :uniqueness => true

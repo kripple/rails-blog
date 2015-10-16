@@ -7,3 +7,20 @@ User.create(
 
   <p>If you are interested in reading about my experiences with Dev Bootcamp, check out my <a href='http://kellyripple/blog'>blog</a>. I post about my experiences, cultural issues, and technical topics.</p>"
   )
+
+# make tags
+ruby = Tag.create(name:"Ruby")
+ror = Tag.create(name:"Ruby on Rails")
+js = Tag.create(name:"JavaScript")
+
+# make posts
+
+Post.create()
+Post.create()
+Post.create()
+
+# make projects
+
+Project.create()
+Project.create()
+Project.create()
