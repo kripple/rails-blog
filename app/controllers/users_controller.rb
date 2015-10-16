@@ -1,4 +1,4 @@
 class UsersController < ApplicationController
-  def projects
-  end
+	def about
+	end
 end

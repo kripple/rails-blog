@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
 	has_many :taggings
 	has_many :tags, through: :taggings
 
-	validates :title, :date, :blurb, :body, :published, :presence => true
+	validates :title, :date, :description, :body, :published, :presence => true
 	validates :title, :uniqueness => true
 
 	before_save :generate_slug

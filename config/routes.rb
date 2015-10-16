@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
 
-  root 'user#about'
-  get 'projects' => 'user#projects'
+  root 'users#about'
 
   get 'login' => 'user_sessions#new'
   post 'users/sessions' => 'user_sessions#create'
   delete 'logout' => 'user_sessions#destroy'
 
+  resources :projects, only: [:index, :new, :create, :update]
   resources :posts, only: [:new, :index, :show, :create, :update]
   resources :tags, only: [:new, :create, :show]
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
