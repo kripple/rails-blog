@@ -1,0 +1,17 @@
+img#headshot {
+  height: 100%;
+  width: auto;
+}
+
+div.circle-crop {
+	margin: 0 auto;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: black;
+  transform: rotate(22deg);
+  border: 2px solid black;
+}
+
