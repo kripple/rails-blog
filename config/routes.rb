@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post 'users/sessions' => 'user_sessions#create'
   delete 'logout' => 'user_sessions#destroy'
 
+  resources :users, only: :update
   resources :projects, only: [:index, :new, :create, :update]
   resources :posts, only: [:new, :index, :show, :create, :update]
   resources :tags, only: [:new, :create, :show]
