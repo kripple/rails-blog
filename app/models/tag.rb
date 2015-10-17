@@ -1,4 +1,6 @@
 class Tag < ActiveRecord::Base
+	# attr_accessor :slug
+
 	belongs_to :post
 	belongs_to :project
 
@@ -6,6 +8,10 @@ class Tag < ActiveRecord::Base
   validates :name, :uniqueness => true
 
   before_save :generate_slug
+
+	def to_param
+    slug
+  end
 
 	private
 

@@ -1,0 +1,9 @@
+<div class="date"><%=@post.date%></h1>
+<h1 class="title"><%=@post.title%></h1>
+<p class="body"><%=@post.body.html_safe%></p>
+
+<% @post.tags.each do |tag| %>
+	<div class="tag"><%=tag.name%></div>
+<% end %>
+
+
