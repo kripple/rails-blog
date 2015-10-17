@@ -52,7 +52,7 @@ Post.create(
       </p>
       <p>The thing is, all of those phrases would be equally as appropriate if stated in a yoga class. It's a radical shift from the traditional educational paradigm, that rewards being 'right' above being inspired. I find this new paradigm captivating. I truly believe it is the best mindset to have to succeed in ... anything, and I'm incredibly grateful to have the opportunity to practice it.</p>",
   published: true,
-  tags: yoga)
+  tags: [yoga])
 
 Post.create(
 	title: "CSS Madness",

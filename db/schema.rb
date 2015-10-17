@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20151016022821) do
     t.string   "title",       null: false
     t.string   "description", null: false
     t.string   "url",         null: false
-    t.string   "source",      null: false
+    t.string   "source"
     t.boolean  "published",   null: false
     t.string   "slug",        null: false
     t.datetime "created_at",  null: false
