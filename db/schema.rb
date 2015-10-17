@@ -27,28 +27,32 @@ ActiveRecord::Schema.define(version: 20151016022821) do
     t.datetime "updated_at",  null: false
   end
 
+  add_index "posts", ["slug"], name: "index_posts_on_slug", using: :btree
+
   create_table "projects", force: :cascade do |t|
     t.string   "title",       null: false
     t.string   "description", null: false
     t.string   "url",         null: false
     t.string   "source",      null: false
     t.boolean  "published",   null: false
+    t.string   "slug",        null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
-  create_table "taggings", force: :cascade do |t|
-    t.integer  "post_id"
-    t.integer  "tag_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  add_index "projects", ["slug"], name: "index_projects_on_slug", using: :btree
 
   create_table "tags", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",          null: false
+    t.string   "slug",          null: false
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
+
+  add_index "tags", ["slug"], name: "index_tags_on_slug", using: :btree
+  add_index "tags", ["taggable_type", "taggable_id"], name: "index_tags_on_taggable_type_and_taggable_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",            null: false
