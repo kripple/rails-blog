@@ -1,5 +1,6 @@
 class Tag < ActiveRecord::Base
-	belongs_to :taggable, polymorphic: true
+	belongs_to :post
+	belongs_to :project
 
 	validates :name, :presence => true
   validates :name, :uniqueness => true

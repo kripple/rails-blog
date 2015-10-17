@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-	has_many :tags, as: :taggable
+	has_many :tags
 	
 	validates :title, :description, :url, :published, :presence => true
 	validates :title, :url, :uniqueness => true

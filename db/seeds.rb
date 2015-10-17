@@ -96,7 +96,7 @@ Project.create(
 	url: "http://kripple.github.io/projects/hangman/hangman.html",
 	source: "https://github.com/kripple/kripple.github.io/tree/master/projects/hangman",
 	published: true,
-	tags: [html, css, js])
+	tags: [html, css, js]) # FIXME - tags not setting
 
 Project.create(
 	title: "Flash Cards",
