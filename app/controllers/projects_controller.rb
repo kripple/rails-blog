@@ -1,7 +1,10 @@
 class ProjectsController < ApplicationController
 	def index
-		@projects = Project.all
+		@projects = Project.all.where(published: true).order(created_at: :desc) 
 	end
+
+	def filter
+  end
 
 	def new
 	end

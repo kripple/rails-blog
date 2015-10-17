@@ -1,0 +1,40 @@
+// Color palette
+$light-beige: #DEE8D7;
+$dark-beige: #918773;
+$rasberry: #420A1A;
+$wine: #240001;
+$charcoal: #4C493A;
+
+#header {
+	left: 0;
+	right: 0;
+	top: 0;
+  height: 40px;
+  background-color: $wine;
+  box-shadow: 2px 2px 5px $dark-beige;
+	position: fixed;
+	font-family: 'Cinzel', serif;
+	font-size: 20px;
+	padding-top: 10px;
+}
+
+#header a {
+	color: $dark-beige;
+}
+
+#header a:hover {
+	color: $light-beige;
+}
+
+#header nav {
+	max-width: 800px;
+	min-width: 300px;
+  margin: 0 auto;
+}
+
+#header nav a {
+	display: inline-block;
+  width: 24%;
+  text-align: center;
+  white-space: nowrap;
+}
