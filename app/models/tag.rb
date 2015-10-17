@@ -1,8 +1,7 @@
 class Tag < ActiveRecord::Base
-	# attr_accessor :slug
-
-	belongs_to :post
-	belongs_to :project
+	has_many :taggings
+	has_many :posts, through: :taggings
+	has_many :projects, through: :taggings
 
 	validates :name, :presence => true
   validates :name, :uniqueness => true

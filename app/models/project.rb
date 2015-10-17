@@ -1,7 +1,6 @@
 class Project < ActiveRecord::Base
-	# attr_accessible :slug
-
-	has_many :tags
+	has_many :taggings, as: :taggable
+	has_many :tags, through: :taggings
 	
 	validates :title, :description, :url, :published, :presence => true
 	validates :title, :url, :uniqueness => true

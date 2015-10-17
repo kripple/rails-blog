@@ -1,7 +1,6 @@
 class Post < ActiveRecord::Base
-	# attr_accessible :slug
-
-	has_many :tags
+	has_many :taggings, as: :taggable
+	has_many :tags, through: :taggings
 
 	validates :title, :date, :description, :body, :published, :presence => true
 	validates :title, :uniqueness => true

@@ -22,7 +22,7 @@ agile = Tag.create(name:"Agile")
 
 # make posts
 
-Post.create(
+p = Post.create(
 	title: "Git vs. Github",
 	date: "May 24, 2015",
 	description: "A beginner's explanation.",
@@ -30,10 +30,12 @@ Post.create(
       <p>Let me start off by saying that Git and Github are completely different things, I know, I was shocked too. People throw around the word 'Github' enough that it starts to seem more magical than it really is. Github.com is just a website. It functions a lot like Dropbox - a place to remotely store things. Github is best at storing code, in fact, it's the world's largest such host.</p>
       <p>Git, on the other hand, is a thing that you install on your personal computer to perform version control on your code. It does this by keeping track of every minute change (down to the character) between one 'commit' (save point) and the last. With git, reverting to a previous version is as easy as typing a single command. This is really good news for anyone interested in creating functional code. Your latest edit breaks a few things? Revert it!</p>
       <p>So, why should you care about Git or Github, you may have asked yourself a few paragraphs north of here? I will tell you why! Git and Github are the best things out there (right now) for version control of code. Used in tandem, they're a beautifully sophisticated solution to a snarly problem - how can one possibly keep track of code changes when working on a development team? Git + Github is how. Happy Coding!</p>",
-  published: true,
-  tags: [git, github])
+  published: true)
 
-Post.create(
+Tagging.create(tag: git, taggable_type: Post, taggable_id: p.id)
+Tagging.create(tag: github, taggable_type: Post, taggable_id: p.id)
+
+p = Post.create(
 	title: "Yoga & Devbootcamp (DBC)",
 	date: "May 24, 2015",
 	description: "My response to watching Shereef's Fireside Chat.",
@@ -51,10 +53,11 @@ Post.create(
         </ol>
       </p>
       <p>The thing is, all of those phrases would be equally as appropriate if stated in a yoga class. It's a radical shift from the traditional educational paradigm, that rewards being 'right' above being inspired. I find this new paradigm captivating. I truly believe it is the best mindset to have to succeed in ... anything, and I'm incredibly grateful to have the opportunity to practice it.</p>",
-  published: true,
-  tags: [yoga])
+  published: true)
 
-Post.create(
+Tagging.create(tag: yoga, taggable_type: Post, taggable_id: p.id)
+
+p = Post.create(
 	title: "CSS Madness",
 	date: "May 30, 2015",
 	description: "My first attempt at understanding CSS.",
@@ -85,27 +88,37 @@ Post.create(
       <p>In conclusion, you most likely want to be using position:absolute, and display:inline-block if you're trying to position objects. </p>
       <p>A word to the wise - If you're changing the display or position properties and you think elements should be moving, but they are not, please, <i>please</i>, check your spelling. Do it for me. I wasted at least an entire hour fiddling with my stylesheet while my HTML class had a dash, and my CSS representation had an underscore. That was not the only time I had a spelling bug this week, it's easy to do, and easy to miss, so check your work!</p>
       <p>Hopefully some of this was helpful. Feedback is always welcome.</p>",
-  published: true,
-  tags: [html, css])
+  published: true)
+
+Tagging.create(tag: html, taggable_type: Post, taggable_id: p.id)
+Tagging.create(tag: css, taggable_type: Post, taggable_id: p.id)
 
 # make projects
 
-Project.create(
+p = Project.create(
 	title: "Hangman",
 	description: "A simple Hangman app.",
 	url: "http://kripple.github.io/projects/hangman/hangman.html",
 	source: "https://github.com/kripple/kripple.github.io/tree/master/projects/hangman",
-	published: true,
-	tags: [html, css, js]) # FIXME - tags not setting
+	published: true)
 
-Project.create(
+Tagging.create(tag: html, taggable_type: Project, taggable_id: p.id)
+Tagging.create(tag: css, taggable_type: Project, taggable_id: p.id)
+Tagging.create(tag: js, taggable_type: Project, taggable_id: p.id)
+
+p = Project.create(
 	title: "Flash Cards",
 	description: "Study and play trivia with user-generated flashcards.",
 	url: "http://the-flash-cards.herokuapp.com/",
-	published: true,
-	tags: [html, css, js, ruby, sinatra, postgres, agile])
+	published: true)
 
-
+Tagging.create(tag: html, taggable_type: Project, taggable_id: p.id)
+Tagging.create(tag: css, taggable_type: Project, taggable_id: p.id)
+Tagging.create(tag: js, taggable_type: Project, taggable_id: p.id)
+Tagging.create(tag: ruby, taggable_type: Project, taggable_id: p.id)
+Tagging.create(tag: sinatra, taggable_type: Project, taggable_id: p.id)
+Tagging.create(tag: postgres, taggable_type: Project, taggable_id: p.id)
+Tagging.create(tag: agile, taggable_type: Project, taggable_id: p.id)
 
 
 
