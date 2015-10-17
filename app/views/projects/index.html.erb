@@ -1,0 +1,12 @@
+<% @projects.each do |project| %>
+	<% if project.published %>
+
+	<h1><%= link_to(project.title, project.url) %></h1>
+	<p><%= link_to("Source", project.source) if project.source %>
+	<p><%=project.description%></p>
+
+	<% end %>
+<% end %>
+
+
+
