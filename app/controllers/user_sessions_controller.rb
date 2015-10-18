@@ -9,6 +9,7 @@ class UserSessionsController < ApplicationController
 		if user && user.authenticate(user_session_params[:password])
 		  login_user(user)
 		end
+    redirect_to :dashboard
   end
 
   def destroy
