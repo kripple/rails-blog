@@ -1,15 +1,17 @@
 class UserSessionsController < ApplicationController
   def new
+    redirect_to :dashboard and return if logged_in?
   	@user = User.new
-  	render 'new', layout: false
   end
 
   def create
   	user = User.find_by(name: "Kelly")
 		if user && user.authenticate(user_session_params[:password])
 		  login_user(user)
-		end
-    redirect_to :dashboard
+		else
+      flash[:error] = "Wrong."
+    end
+    redirect_to :login
   end
 
   def destroy

@@ -4,13 +4,6 @@ class UsersController < ApplicationController
 	end
 
 	def dashboard
-		authorize_user
-		render "/users/dashboard"
+		redirect_to :login unless current_user
 	end
-
-	private
-
-  def authorize_user
-    redirect_to :login unless current_user
-  end
 end
