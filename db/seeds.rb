@@ -39,7 +39,7 @@ p = Post.create(
 	title: "Yoga & Devbootcamp (DBC)",
 	date: "May 24, 2015",
 	description: "My response to watching Shereef's Fireside Chat.",
-	body: "<p/>I never thought this day would come - me with a blog. I somehow doubt that blogging and tweeting will be the only new behaviors I will inherit from this educational adventure called Devbootcamp. This post marks the completion point of week one. The following is my response to a discussion on DBC culture. 
+	body: "<p/>I never thought this day would come - me with a blog. I somehow doubt that blogging and tweeting will be the only new behaviors I will inherit from this educational adventure called Dev Bootcamp. This post marks the completion point of week one. The following is my response to a discussion on DBC culture. 
       <p>I was first introduced to the DBC philosophy in a yoga studio. I've been an avid hot yoga practitioner for the past few years. I went so far as to obtain a teacher's certification - 200 hours of the best good sweaty fun that can be had while clothed. For those of you that have never done yoga and/or have no idea where I'm going with this, let me explain! The way you become 'better' at yoga is oddly similar to the way DBC would have us become 'better' at web development. Ready? I'm going to make a list of advice given to new boots: 
         <ol>
           <li>Come in with the attitude of \"This is *my* time, I'm going to make it awesome\"</li>
