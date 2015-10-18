@@ -44,6 +44,22 @@ $red: #991D08;
 	opacity: 0.8;
 }
 
+a#copyright {
+	color: $charcoal;
+	text-decoration: none;
+}
+
+a#copyright:hover {
+	cursor: default;
+}
+
+a#logout {
+	color: $rasberry;
+	text-decoration: none;
+}
+
+
+
 
 
 

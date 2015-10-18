@@ -17,11 +17,16 @@
 </head>
 <body>
 
-	<%= render 'shared/header' %>
+	<% if logged_in? %>
+    <%= render 'shared/updates_header' %>
+  <% else %>
+    <%= render 'shared/header' %>
+  <% end %>
 
 	<%= yield %>
 
 	<%= render 'shared/footer' %>
+
 
 </body>
 </html>

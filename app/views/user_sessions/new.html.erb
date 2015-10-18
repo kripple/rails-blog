@@ -9,7 +9,7 @@
 <body>
 
 <div class="login-background">
-<%= form_for(:user_session, url: users_sessions_path) do |f| %>
+<%= form_for(:user_session, url: "dashboard") do |f| %>
 	<div class="absolute-centered"><%= f.password_field :password, :class=>"round"%></div>
 <% end %>
 </div>

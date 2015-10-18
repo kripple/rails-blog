@@ -5,6 +5,12 @@
 			<%=link_to(image_tag("linkedin.png"), "https://www.linkedin.com/in/kellymripple")%>
 			<%=link_to(image_tag("twitter.png"), "https://twitter.com/krippleffect")%>
     </nav>
-		<div>© 2015 Kelly Ripple</div>
+		<div>
+			<% if logged_in? %>
+		    <%= link_to("logout", logout_path, method: :delete, :id=>"logout") %>
+		  <% else %>
+		    <%=link_to("© 2015 Kelly Ripple", :login, :id=>"copyright")%>
+		  <% end %>
+		</div>
 	</footer>
 </div>
