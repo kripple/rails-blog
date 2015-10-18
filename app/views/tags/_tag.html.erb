@@ -1,0 +1,6 @@
+<% taggable.tags.each do |tag| %>
+	<%= link_to(tag.name, filter_path(taggable), :class=>"tag") %>
+<% end %>
+
+
+

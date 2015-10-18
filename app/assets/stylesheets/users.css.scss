@@ -1,3 +1,11 @@
+// Color palette
+$light-beige: #DEE8D7;
+$dark-beige: #918773;
+$rasberry: #420A1A;
+$wine: #240001;
+$charcoal: #4C493A;
+$red: #991D08;
+
 img#headshot {
   height: 100%;
   width: auto;
@@ -20,4 +28,14 @@ div.circle-crop {
   height: 250px;
   width: 250px;
   padding: 40px 20px 0 20px;
+}
+
+#about a {
+  font-weight: bold;
+  color: $red;
+  text-decoration: none;
+}
+
+#about a:hover {
+  color: black;
 }

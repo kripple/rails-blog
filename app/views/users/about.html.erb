@@ -1,11 +1,9 @@
-<div class="background-color">
-	<div class="container">
-	  <%= @about.html_safe %>
+<div id="about" class="container">
+  <%= @about.html_safe %>
 
-	  <div class="pic-container">
-	  	<div class="circle-crop">
-	  		<%= image_tag("headshot.png", :id => "headshot") %>
-	  	</div>
-	  </div>
-	</div>
+  <div class="pic-container">
+  	<div class="circle-crop">
+  		<%= image_tag("headshot.png", :id => "headshot") %>
+  	</div>
+  </div>
 </div>

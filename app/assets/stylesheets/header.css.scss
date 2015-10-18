@@ -4,6 +4,7 @@ $dark-beige: #918773;
 $rasberry: #420A1A;
 $wine: #240001;
 $charcoal: #4C493A;
+$red: #991D08;
 
 #header {
 	left: 0;
@@ -20,6 +21,7 @@ $charcoal: #4C493A;
 
 #header a {
 	color: $dark-beige;
+	text-decoration: none;
 }
 
 #header a:hover {

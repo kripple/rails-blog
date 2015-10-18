@@ -1,7 +1,10 @@
-<h1 class="title"><%= link_to(project.title, project.url) %></h1>
-<p><%= link_to("Source", project.source) if project.source %>
-<p><%=project.description%></p>
+<div class="index-container">
+	<div class="project-header">
+		<h1 class="project title"><%= link_to(project.title, project.url) %></h1>
+		<%= link_to("Source", project.source, :class=>"source") if project.source %>
+	</div>
 
-<% project.tags.each do |tag| %>
-	<div class="tag"><%=tag.name%></div>
-<% end %>
+	<p><%=project.description%></p>
+
+	<%= render "tags/tag", taggable: project %>
+</div>

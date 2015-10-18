@@ -4,6 +4,11 @@ $dark-beige: #918773;
 $rasberry: #420A1A;
 $wine: #240001;
 $charcoal: #4C493A;
+$red: #991D08;
+
+// Fonts
+$body-font: 'Armata', sans-serif;
+$header-font: 'Cinzel', serif;
 
 .round {
 	border-radius: 5px;
@@ -15,21 +20,43 @@ $charcoal: #4C493A;
 	margin: 0 auto;
 	padding: 70px 8% 40px 8%;
 	color: $charcoal;
-	font-family: 'Armata', sans-serif;
+	font-family: $body-font;
 }
 
-a {
+.index-container {
+	padding-bottom: 20px;
+}
+
+.title a {
 	font-weight: bold;
-	color: #991D08;
+	color: $red;
 	text-decoration: none;
 }
 
-a:hover {
+.title a:hover {
 	color: black;
 }
 
 h1.title {
-	font-family: 'Cinzel', serif;
+	font-family: $header-font;
+	margin-bottom: 0;
+}
+
+a.tag {
+	display: inline-block;
+	margin-right: 1px;
+	border: 1px solid $dark-beige;
+	border-radius: 1px;
+	padding: 1px 3px;
+	background-color: $light-beige;
+	color: $dark-beige;
+	text-decoration: none;
+}
+
+a.tag:hover {
+	background-color: $red;
+	border: 1px solid $wine;
+	color: $wine;
 }
 
 

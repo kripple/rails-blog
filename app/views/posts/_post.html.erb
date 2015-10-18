@@ -1,6 +1,6 @@
-<h1 class="title"><%= link_to(post.title, post_path(post) ) %></h1>
-<p><%=post.description%></p>
+<div class="index-container">
+	<h1 class="title"><%= link_to(post.title, post_path(post) ) %></h1>
+	<p><%=post.description%></p>
 
-<% post.tags.each do |tag| %>
-	<div class="tag"><%=tag.name%></div>
-<% end %>
+	<%= render "tags/tag", taggable: post %>
+</div>
