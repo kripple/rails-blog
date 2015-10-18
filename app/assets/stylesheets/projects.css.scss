@@ -10,18 +10,20 @@ a.source {
 	font-weight: bold;
 	color: $red;
 	text-decoration: none;
-	display: inline-block;
+	font-size: 14px;
 }
 
 a.source:hover {
 	color: black;
 }
 
-div.project-header {
-	// display:inline-block;
-	// vertical-align: top;
+h1.project {
+	display: inline-block;
 }
 
-.project {
+div.source-container {
+	vertical-align: top;
 	display: inline-block;
+	padding-left: 20px;
+	padding-top: 32px;
 }

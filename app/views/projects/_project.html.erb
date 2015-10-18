@@ -1,7 +1,7 @@
 <div class="index-container">
-	<div class="project-header">
-		<h1 class="project title"><%= link_to(project.title, project.url) %></h1>
-		<%= link_to("Source", project.source, :class=>"source") if project.source %>
+	<h1 class="project title"><%= link_to(project.title, project.url) %></h1>
+	<div class="source-container">
+		<%= link_to("[SOURCE]", project.source, :class=>"source") if project.source %>
 	</div>
 
 	<p><%=project.description%></p>
