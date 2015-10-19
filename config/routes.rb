@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post 'posts/filter' => 'posts#filter'
   post 'projects/filter' => 'projects#filter'
   
-  resources :users, only: :update
+  resources :users, only: [:create, :update]
   resources :posts, only: [:new, :index, :show, :create, :update]
   resources :projects, only: [:index, :new, :create, :update]
   resources :tags, only: [:new, :create]

@@ -3,6 +3,12 @@
 		<%= link_to("about", :root) %>
 		<%= link_to("blog", :posts) %>
 		<%= link_to("projects", :projects) %>
-		<%= link_to("resume", "/resume.pdf", :target => "_blank") %>
+		<% if logged_in? %>
+	    <%= link_to("dashboard", "/dashboard") %>
+	  <% else %>
+	    <%= link_to("resume", "/resume.pdf", :target => "_blank") %>
+	  <% end %>
 	</nav>
 </header>
+
+
