@@ -1,6 +1,22 @@
 class ProjectsController < ApplicationController
+	before_action :authorize, only: [:show, :create]
+
 	def index
 		@projects = Project.all.where(published: true).order(created_at: :desc) 
+	end
+
+	def show
+		@project = Project.find_by(slug: params[:id])
+	end
+
+	def create
+		@project = Project.find_by(id: params[:project][:id])
+		if @project.update_attributes(project_params) 
+			redirect_to :dashboard 
+		else
+			flash[:errors] = @project.errors.full_messages
+			redirect_to project_path(@project)
+		end
 	end
 
 	def filter
@@ -9,11 +25,14 @@ class ProjectsController < ApplicationController
 	def new
 	end
 
-	def create
-	end
-
 	def update
 	end
+
+	private
+
+	def project_params
+    params.require(:project).permit(:title, :description, :source, :url, :published)
+  end
 end
 
 

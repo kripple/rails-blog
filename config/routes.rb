@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   
   resources :users, only: [:create, :update]
   resources :posts, only: [:new, :index, :show, :create, :update]
-  resources :projects, only: [:index, :new, :create, :update]
+  resources :projects, only: [:index, :new, :show, :create, :update]
   resources :tags, only: [:new, :create]
 
 end

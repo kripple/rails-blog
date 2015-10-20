@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+	before_action :authorize, only: [:create]
+
 	def about
 		@user = User.find_by(name: "Kelly")
 	end
@@ -9,14 +11,12 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.find_by(name: "Kelly")
-		@user.update_attributes(about: user_params[:about]) if current_user
-		redirect_to :dashboard
+		if @user.update_attributes(about: user_params[:about]) 
+			redirect_to :dashboard
+		else
+			redirect_to :root
+		end
 	end
-
-	# def update
-	# 	@user = User.find_by(name: "Kelly")
-	# 	binding.pry
-	# end
 
 	private
 
@@ -24,3 +24,6 @@ class UsersController < ApplicationController
     params.require(:user).permit(:about)
   end
 end
+
+
+

@@ -2,7 +2,7 @@
 	<% if logged_in? %>
 
 		<%= form_for(:user, url: users_path) do |f| %>
-			<p><%= f.text_area :about, :class=>"text-input"%></p>
+			<p><%= f.text_area :about, :class=>"text-area-input"%></p>
 			<p><%= @user.errors[:about].first if @user %></p>
 			<p><%= f.submit "Save Changes" %></p>
 		<% end %>

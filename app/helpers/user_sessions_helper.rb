@@ -15,4 +15,8 @@ module UserSessionsHelper
     session.delete(:user_id)
     @current_user = nil
   end
+
+  def authorize
+    redirect_to :root and return unless current_user
+  end
 end
