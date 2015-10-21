@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20151017182057) do
     t.string   "date",        null: false
     t.text     "description", null: false
     t.text     "body",        null: false
-    t.boolean  "published",   null: false
+    t.boolean  "published"
     t.string   "slug",        null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20151017182057) do
     t.string   "description", null: false
     t.string   "url",         null: false
     t.string   "source"
-    t.boolean  "published",   null: false
+    t.boolean  "published"
     t.string   "slug",        null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

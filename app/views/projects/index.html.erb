@@ -1,4 +1,9 @@
 <div class="container">
+	<% if logged_in? %>
+		<div class="unpublished-container">
+    	<%= render @unpublished %>
+    </div>
+  <% end %>
 	<%= render @projects %>
 </div>
 

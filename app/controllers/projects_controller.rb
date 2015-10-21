@@ -3,10 +3,12 @@ class ProjectsController < ApplicationController
 
 	def index
 		@projects = Project.all.where(published: true).order(created_at: :desc) 
+		@unpublished = Project.all.where(published: false).order(created_at: :desc)
 	end
 
 	def show
-		@project = Project.find_by(slug: params[:id])
+		p = Project.find_by(slug: params[:id])
+		p.published ? @project = p : @unpublished = p
 	end
 
 	def create

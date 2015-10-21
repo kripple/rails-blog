@@ -16,7 +16,8 @@
 
 		<br>
 
-		<p><%= f.check_box :published %>  <%= f.label :published %></p>
+		<p><%= f.radio_button :published, true %>  <%= f.label :published %></p>
+		<p><%= f.radio_button :published, false %>  <%= f.label :published , "Unpublished" %></p>
 
 		<br>
 
