@@ -1,0 +1,26 @@
+<%= form_for(:post, url: posts_path) do |f| %>
+	<%= hidden_field( :post, :id ) %>
+
+	<p><%= f.label :title %>: </p>
+	<p><%= f.text_field :title, :class=>"text-field-input" %></p>
+
+	<p><%= f.label :date %>: </p>
+	<p><%= f.text_field :date, :class=>"text-field-input" %></p>
+
+	<p><%= f.label :description %>: </p>
+	<p><%= f.text_field :description, :class=>"text-field-input" %></p>
+
+	<p><%= f.label :body %>: </p>
+	<p><%= f.text_field :body, :class=>"text-area-input" %></p>
+
+	<br>
+
+	<p><%= f.radio_button :published, true %>  <%= f.label :published %></p>
+	<p><%= f.radio_button :published, false %>  <%= f.label :published , "Unpublished" %></p>
+
+	<br>
+
+	<%= flash[:errors].first if flash[:errors] %>
+
+	<p><%= f.submit "Save Changes" %></p>
+<% end %>

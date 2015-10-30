@@ -93,7 +93,21 @@ p = Post.create(
 Tagging.create(tag: html, taggable_type: Post, taggable_id: p.id)
 Tagging.create(tag: css, taggable_type: Post, taggable_id: p.id)
 
+# 
 # make projects
+# 
+
+# css = Tag.create(name:"CSS")
+# html = Tag.create(name:"HTML")
+# yoga = Tag.create(name:"Yoga")
+# git = Tag.create(name:"Git")
+# github = Tag.create(name:"Github")
+# js = Tag.create(name:"JavaScript")
+# ruby = Tag.create(name:"Ruby")
+# sinatra = Tag.create(name:"Sinatra")
+# postgres = Tag.create(name:"PostgreSQL")
+# agile = Tag.create(name:"Agile")
+rails = Tag.create(name:"Ruby on Rails")
 
 p = Project.create(
 	title: "Hangman",
@@ -105,6 +119,19 @@ p = Project.create(
 Tagging.create(tag: html, taggable_type: Project, taggable_id: p.id)
 Tagging.create(tag: css, taggable_type: Project, taggable_id: p.id)
 Tagging.create(tag: js, taggable_type: Project, taggable_id: p.id)
+
+p = Project.create(
+  title: "Unicorns on Rails",
+  description: "A basic Rails CRUD app. Explores the functionality of the Devise and Ransack Gems.",
+  url: "http://unicorns-on-rails.herokuapp.com/",
+  published: true)
+
+Tagging.create(tag: html, taggable_type: Project, taggable_id: p.id)
+Tagging.create(tag: css, taggable_type: Project, taggable_id: p.id)
+Tagging.create(tag: js, taggable_type: Project, taggable_id: p.id)
+Tagging.create(tag: html, taggable_type: Project, taggable_id: p.id)
+Tagging.create(tag: ruby, taggable_type: Project, taggable_id: p.id)
+Tagging.create(tag: rails, taggable_type: Project, taggable_id: p.id)
 
 p = Project.create(
 	title: "Flash Cards",

@@ -1,11 +1,22 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all.where(published: true).order(created_at: :desc) 
+    @posts = Post.all.where(published: true).order(created_at: :desc)
+    @unpublished = Post.all.where(published: false).order(created_at: :desc) 
   end
 
   def show
     p = Post.find_by_slug(params[:id])
-    p.published ? @post = p : not_found
+    p.published ? @post = p : @unpublished = p
+  end
+
+  def create
+    @post = Post.find_by(id: params[:post][:id])
+    if @post.update_attributes(post_params) 
+      redirect_to :dashboard 
+    else
+      flash[:errors] = @post.errors.full_messages
+      redirect_to post_path(@post)
+    end
   end
 
   def filter
@@ -14,12 +25,15 @@ class PostsController < ApplicationController
   def new
   end
 
-  def create
-  end
-
   def update
   end
 
   def destroy
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :description, :date, :body, :published)
   end
 end
