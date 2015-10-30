@@ -1,11 +1,14 @@
 <header id="header">
 	<nav>
-		<%= link_to("about", :root) %>
-		<%= link_to("blog", :posts) %>
-		<%= link_to("projects", :projects) %>
 		<% if logged_in? %>
+			<%= link_to("about", :root) %>
+			<%= link_to("posts", :posts) %>
+			<%= link_to("projects", :projects) %>
 	    <%= link_to("dashboard", "/dashboard") %>
 	  <% else %>
+		  <%= link_to("about", :root) %>
+			<%= link_to("blog", :posts) %>
+			<%= link_to("projects", :projects) %>
 	    <%= link_to("resume", "/resume.pdf", :target => "_blank") %>
 	  <% end %>
 	</nav>
