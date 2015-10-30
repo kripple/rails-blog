@@ -49,15 +49,14 @@ a.tag {
 	border: 1px solid $dark-beige;
 	border-radius: 1px;
 	padding: 1px 3px;
-	background-color: $light-beige;
 	color: $dark-beige;
 	text-decoration: none;
 }
 
 a.tag:hover {
-	background-color: $red;
-	border: 1px solid $wine;
-	color: $wine;
+	border: 2px solid $red;
+	padding: 0px 2px;
+	color: $red;
 }
 
 .text-field-input {
