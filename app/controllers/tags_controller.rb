@@ -1,11 +1,11 @@
 class TagsController < ApplicationController
+	before_action :redirect_unless_authorized, only: [:new, :create]
+
   def new
-  	redirect_unless_authorized
   	@tag = Tag.new
   end
 
   def create
-  	redirect_unless_authorized
     @tag = Tag.create(tag_params)
     if @tag.save
       redirect_to :dashboard

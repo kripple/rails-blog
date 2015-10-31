@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :redirect_unless_authorized, only: [:new, :create, :edit, :update]
 
   def index
     @posts = Post.all.where(published: true).order(created_at: :desc)
@@ -7,22 +8,6 @@ class PostsController < ApplicationController
 
   def show
     find_post
-  end
-
-  def edit
-    redirect_unless_authorized
-    find_post
-  end 
-
-  def update
-    redirect_unless_authorized
-    find_post
-    if @post.update_attributes(post_params) 
-      redirect_to :posts
-    else
-      flash[:errors] = @post.errors.full_messages
-      render :edit
-    end
   end
 
   def new
@@ -41,10 +26,23 @@ class PostsController < ApplicationController
     end
   end
 
-  def filter
+  def edit
+    redirect_unless_authorized
+    find_post
+  end 
+
+  def update
+    redirect_unless_authorized
+    find_post
+    if @post.update_attributes(post_params) 
+      redirect_to :posts
+    else
+      flash[:errors] = @post.errors.full_messages
+      render :edit
+    end
   end
 
-  def destroy
+  def filter
   end
 
   private
