@@ -25,20 +25,21 @@ class PostsController < ApplicationController
     end
   end
 
-  # def create
-  #   @post = Post.find_by(id: params[:post][:id])
-  #   if @post.update_attributes(post_params) 
-  #     redirect_to :dashboard 
-  #   else
-  #     flash[:errors] = @post.errors.full_messages
-  #     redirect_to post_path(@post)
-  #   end
-  # end
-
-  def filter
+  def new
+    @post = Post.new
   end
 
-  def new
+  def create
+    @post = Post.create(post_params)
+    if @post.save
+      redirect_to :posts
+    else
+      flash[:errors] = @post.errors.full_messages
+      redirect_to new_post_path(@post)
+    end
+  end
+
+  def filter
   end
 
   def destroy
