@@ -26,19 +26,19 @@ class ProjectsController < ApplicationController
     end
 	end
 
-	# def create
-	# 	@project = Project.find_by(id: params[:project][:id])
-	# 	# put check in - if source is blank, set to nil
-	# 	if @project.update_attributes(project_params) 
-	# 		redirect_to :dashboard 
-	# 	else
-	# 		flash[:errors] = @project.errors.full_messages
-	# 		redirect_to project_path(@project)
-	# 	end
-	# end
-
 	def new
-	end
+    @project = Project.new
+  end
+
+  def create
+    @project = project.create(project_params)
+    if @project.save
+      redirect_to :projects
+    else
+      flash[:errors] = @project.errors.full_messages
+      redirect_to new_project_path(@project)
+    end
+  end
 
 	def filter
   end
