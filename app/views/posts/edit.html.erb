@@ -1,6 +1,6 @@
 <div class="container">
 
-	<%= form_for(:put, url: post_path(@post)) do |f| %>
+	<%= form_for( :post, url: post_path(@post), action: "update", method: "PUT") do |f| %>
 		<%= render "form", { f: f, post: @post } %>
 	<% end %>
 
