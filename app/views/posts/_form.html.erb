@@ -12,6 +12,9 @@
 <p><%= f.label :body %>: </p>
 <p><%= f.text_area :body, :value=>@post.body, :class=>"text-area-input" %></p>
 
+<p><%= f.label :tags %>: </p>
+<p><%= f.text_field :tags, :value=>@post.tags_list, :class=>"text-field-input" %></p>
+
 <br>
 
 <p><%= f.radio_button :published, true, :checked=> @post.published %>  <%= f.label :published %></p>

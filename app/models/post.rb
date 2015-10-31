@@ -11,6 +11,10 @@ class Post < ActiveRecord::Base
     slug
   end
 
+  def tags_list
+  	self.tags.each_with_object("") { |obj,elem| elem << obj.name << ", " }.chomp(", ")
+  end
+
 	private
 
 	def generate_slug
