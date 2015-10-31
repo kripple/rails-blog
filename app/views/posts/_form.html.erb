@@ -1,26 +1,24 @@
-<%= form_for(:post, url: posts_path) do |f| %>
-	<%= hidden_field( :post, :id ) %>
+<%= hidden_field( post, :id ) %>
 
-	<p><%= f.label :title %>: </p>
-	<p><%= f.text_field :title, :class=>"text-field-input" %></p>
+<p><%= f.label :title %>: </p>
+<p><%= f.text_field :title, :value=>post.title, :class=>"text-field-input" %></p>
 
-	<p><%= f.label :date %>: </p>
-	<p><%= f.text_field :date, :class=>"text-field-input" %></p>
+<p><%= f.label :date %>: </p>
+<p><%= f.text_field :date, :value=>post.date, :class=>"text-field-input" %></p>
 
-	<p><%= f.label :description %>: </p>
-	<p><%= f.text_field :description, :class=>"text-field-input" %></p>
+<p><%= f.label :description %>: </p>
+<p><%= f.text_field :description, :value=>post.description, :class=>"text-field-input" %></p>
 
-	<p><%= f.label :body %>: </p>
-	<p><%= f.text_area :body, :class=>"text-area-input" %></p>
+<p><%= f.label :body %>: </p>
+<p><%= f.text_area :body, :value=>post.body, :class=>"text-area-input" %></p>
 
-	<br>
+<br>
 
-	<p><%= f.radio_button :published, true %>  <%= f.label :published %></p>
-	<p><%= f.radio_button :published, false %>  <%= f.label :published , "Unpublished" %></p>
+<p><%= f.radio_button :published, true, :checked=> post.published %>  <%= f.label :published %></p>
+<p><%= f.radio_button :published, false, :checked=> !(post.published) %>  <%= f.label :published , "Unpublished" %></p>
 
-	<br>
+<br>
 
-	<%= flash[:errors].first if flash[:errors] %>
+<%= flash[:errors].first if flash[:errors] %>
 
-	<p><%= f.submit "Save Changes" %></p>
-<% end %>
+<p><%= f.submit "Save Changes" %></p>

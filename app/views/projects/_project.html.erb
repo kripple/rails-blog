@@ -1,14 +1,14 @@
 <div class="index-container">
-	
-	<h1 class="project title"><%= link_to(project.title, project.url) %></h1>
+	<% if logged_in? %>
+		<h1 class="project title"><%= link_to(project.title, project_path(project)) %></h1>
+	<% else %>
+		<h1 class="project title"><%= link_to(project.title, project.url) %></h1>
+	<% end %>
+
 	<% if project.source && project.source.length > 0 %>
 		<div class="source-container">
 			<%= link_to("[SOURCE]", project.source, :class=>"source") %>
 		</div>
-	<% end %>
-
-	<% if logged_in? %>
-		<p><%= link_to("Edit Project", project_path(project), :class=>"tag") %></p>
 	<% end %>
 
 	<p><%=project.description%></p>
@@ -16,3 +16,8 @@
 	<%= render "tags/tag", taggable: project %>
 	  
 </div>
+
+
+
+
+

@@ -13,6 +13,7 @@ class ProjectsController < ApplicationController
 
 	def create
 		@project = Project.find_by(id: params[:project][:id])
+		# put check in - if source is blank, set to nil
 		if @project.update_attributes(project_params) 
 			redirect_to :dashboard 
 		else
@@ -21,11 +22,11 @@ class ProjectsController < ApplicationController
 		end
 	end
 
-	def filter
-  end
-
 	def new
 	end
+
+	def filter
+  end
 
 	def update
 	end

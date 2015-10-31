@@ -1,17 +1,9 @@
 <div class="container">
-	<% if logged_in? %>
+  <h1 class="title"><%=@post.title%></h1>
+	<p class="date"><%=@post.date%></p>
+	<p class="body"><%=@post.body.html_safe%></p>
 
-		<%= render "form" %>
-		
-	<% else %>
-
-	  <h1 class="title"><%=@post.title%></h1>
-		<p class="date"><%=@post.date%></p>
-		<p class="body"><%=@post.body.html_safe%></p>
-
-		<%= render "tags/tag", taggable: @post %>
-
-	<% end %>
+	<%= render "tags/tag", taggable: @post %>
 </div>
 
 
