@@ -1,6 +1,6 @@
 <div class="container">
 	<%= form_for @project do |f| %>
 		<%= render "form", { f: f } %>
-		<p><%= f.submit "Create Project" %></p>
+		<p><%= f.submit "Create Project", :class=>"submit-button" %></p>
 	<% end %>
 </div>

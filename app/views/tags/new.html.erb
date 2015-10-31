@@ -1,0 +1,14 @@
+<div class="container">
+	<%= form_for @tag do |f| %>
+		<%= hidden_field( :tag, :id ) %>
+
+		<p><%= f.label :name, "Tag" %>: </p>
+		<p><%= f.text_field :name, :value=>@tag.name, :class=>"text-field-input" %></p>
+
+		<br>
+
+		<p class="flash-errors"><%= flash[:errors].first if flash[:errors] %></p>
+
+		<p><%= f.submit "Create Tag", :class=>"submit-button" %></p>
+	<% end %>
+</div>

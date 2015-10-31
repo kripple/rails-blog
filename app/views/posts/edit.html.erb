@@ -1,6 +1,6 @@
 <div class="container">
 	<%= form_for @post do |f| %>
 		<%= render "form", { f: f } %>
-		<p><%= f.submit "Save Changes" %></p>
+		<p><%= f.submit "Save Changes", :class=>"submit-button" %></p>
 	<% end %>
 </div>

@@ -80,3 +80,14 @@ div.field_with_errors {
   display: inline;
 }
 
+input.submit-button {
+	background-color: white;
+	color: $charcoal;
+	border: 1px solid $charcoal;
+	border-radius: 2px;
+	font-family: $body-font;
+	padding:8px;
+	cursor: pointer;
+	font-size: 14px;
+}
+
