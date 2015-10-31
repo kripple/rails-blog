@@ -1,22 +1,17 @@
 class ProjectsController < ApplicationController
-	before_action :authorize, only: [:show, :create]
 
 	def index
 		@projects = Project.all.where(published: true).order(created_at: :desc) 
 		@unpublished = Project.all.where(published: false).order(created_at: :desc)
 	end
 
-	def show
-		find_project
-    redirect_to edit_project_path(@project) if logged_in?
-    @unpublished = @project unless @project.published
-	end
-
 	def edit
+		redirect_unless_authorized
 		find_project
 	end
 
 	def update
+		redirect_unless_authorized
 		find_project
     if @project.update_attributes(project_params) 
       redirect_to :projects
@@ -27,16 +22,18 @@ class ProjectsController < ApplicationController
 	end
 
 	def new
-    @project = Project.new
+		redirect_unless_authorized
+    @project = Project.new 
   end
 
   def create
-    @project = project.create(project_params)
+  	redirect_unless_authorized
+    @project = Project.create(project_params)
     if @project.save
       redirect_to :projects
     else
       flash[:errors] = @project.errors.full_messages
-      redirect_to new_project_path(@project)
+      render :new
     end
   end
 

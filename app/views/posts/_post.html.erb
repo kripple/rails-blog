@@ -1,5 +1,9 @@
 <div class="index-container">
-	<h1 class="title"><%= link_to(post.title, post_path(post) ) %></h1>
+	<% if logged_in? %>
+		<h1 class="title"><%= link_to(post.title, edit_post_path(post) ) %></h1>
+	<% else %>
+		<h1 class="title"><%= link_to(post.title, post_path(post) ) %></h1>
+	<% end %>
 	<p><%=post.description%></p>
 
 	<%= render "tags/tag", taggable: post %>

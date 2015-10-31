@@ -16,7 +16,7 @@ module UserSessionsHelper
     @current_user = nil
   end
 
-  def authorize
+  def redirect_unless_authorized
     redirect_to :root and return unless current_user
   end
 end

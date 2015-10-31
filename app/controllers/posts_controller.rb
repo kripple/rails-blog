@@ -7,29 +7,31 @@ class PostsController < ApplicationController
 
   def show
     find_post
-    redirect_to edit_post_path(@post) if logged_in?
-    @unpublished = @post unless @post.published
   end
 
   def edit
+    redirect_unless_authorized
     find_post
   end 
 
   def update
+    redirect_unless_authorized
     find_post
     if @post.update_attributes(post_params) 
       redirect_to :posts
     else
       flash[:errors] = @post.errors.full_messages
-      redirect_to edit_post_path(@post)
+      render :new
     end
   end
 
   def new
+    redirect_unless_authorized
     @post = Post.new
   end
 
   def create
+    redirect_unless_authorized
     @post = Post.create(post_params)
     if @post.save
       redirect_to :posts
