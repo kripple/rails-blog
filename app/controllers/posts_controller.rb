@@ -11,12 +11,10 @@ class PostsController < ApplicationController
   end
 
   def new
-    redirect_unless_authorized
     @post = Post.new
   end
 
   def create
-    redirect_unless_authorized
     @post = Post.create(post_params)
     if @post.save
       redirect_to :posts
@@ -27,12 +25,10 @@ class PostsController < ApplicationController
   end
 
   def edit
-    redirect_unless_authorized
     find_post
   end 
 
   def update
-    redirect_unless_authorized
     find_post
     if @post.update_attributes(post_params) 
       redirect_to :posts
