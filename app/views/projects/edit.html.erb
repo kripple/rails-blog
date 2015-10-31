@@ -1,0 +1,7 @@
+<div class="container">
+	<%= form_for( :project, url: project_path(@project), action: "update", method: "PUT") do |f| %>
+		<%= render "form", { f: f, project: @project } %>
+	<% end %>
+</div>
+
+

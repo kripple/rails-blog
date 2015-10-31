@@ -1,0 +1,24 @@
+<%= hidden_field( :project, :id ) %>
+
+<p><%= f.label :title %>: </p>
+<p><%= f.text_field :title, :class=>"text-field-input" %></p>
+
+<p><%= f.label :url, "URL" %>: </p>
+<p><%= f.text_field :url, :class=>"text-field-input" %></p>
+
+<p><%= f.label :source %>: </p>
+<p><%= f.text_field :source, :class=>"text-field-input" %></p>
+
+<p><%= f.label :description %>: </p>
+<p><%= f.text_field :description, :class=>"text-field-input" %></p>
+
+<br>
+
+<p><%= f.radio_button :published, true %>  <%= f.label :published %></p>
+<p><%= f.radio_button :published, false %>  <%= f.label :published , "Unpublished" %></p>
+
+<br>
+
+<%= flash[:errors].first if flash[:errors] %>
+
+<p><%= f.submit "Save Changes" %></p>
