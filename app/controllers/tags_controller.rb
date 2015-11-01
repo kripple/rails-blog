@@ -3,12 +3,14 @@ class TagsController < ApplicationController
 
   def new
   	@tag = Tag.new
+    @tags = Tag.all
   end
 
   def create
     @tag = Tag.create(tag_params)
+    @tags = Tag.all
     if @tag.save
-      redirect_to :dashboard
+      redirect_to new_tag_path
     else
       flash[:errors] = @tag.errors.full_messages
       render :new
@@ -18,6 +20,6 @@ class TagsController < ApplicationController
   private
 
 	def tag_params
-    params.require(:tag).permit(:name)
+    params.require(:tag).permit(:id,:name)
   end
 end

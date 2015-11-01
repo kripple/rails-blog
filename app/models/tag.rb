@@ -6,6 +6,7 @@ class Tag < ActiveRecord::Base
 	validates :name, :presence => true
   validates :name, :uniqueness => true
 
+  before_validation :remove_padding, :on => :create
   before_save :generate_slug
 
 	def to_param
@@ -16,6 +17,10 @@ class Tag < ActiveRecord::Base
 
 	def generate_slug
 		self.slug = self.name.parameterize
+	end
+
+	def remove_padding
+		self.name = self.name.gsub(/\A */,"").gsub(/ *\z/,"")
 	end
 end
 
