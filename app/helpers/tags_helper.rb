@@ -3,8 +3,8 @@ module TagsHelper
 		"#{self.class.name.downcase}"
 	end
 
-	def filter_path(taggable)
-		"#{self.taggable_type}s/filter"
+	def filter_path
+		self.taggable_type + "s/filter"
 	end
 
 	def tags_list
@@ -12,11 +12,9 @@ module TagsHelper
   end
 
   def add_tags(list)
-  	list.split(/, ?/).each do |tag_name|
-  		# remove spaces from before / after tags (use a better regex)
+  	list.split(/ *, */).each do |tag_name|
   		tag = Tag.find_by(name: tag_name) || Tag.create(name: tag_name)
-  		binding.pry
-  		Tagging.create(tag: tag, taggable_type: taggable_type(self), taggable_id: self.id)
+  		self.tags << tag unless self.tags.any? { |t| t.name == tag_name }
   	end
   end
 end
