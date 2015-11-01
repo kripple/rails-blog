@@ -13,6 +13,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.create(project_params)
     if @project.save
+      @project.add_tags(params[:project][:tags])
       redirect_to :projects
     else
       flash[:errors] = @project.errors.full_messages
@@ -27,6 +28,7 @@ class ProjectsController < ApplicationController
   def update
     find_project
     if @project.update_attributes(project_params) 
+      @project.add_tags(params[:project][:tags])
       redirect_to :projects
     else
       flash[:errors] = @project.errors.full_messages

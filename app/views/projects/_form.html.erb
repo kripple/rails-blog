@@ -12,6 +12,9 @@
 <p><%= f.label :description %>: </p>
 <p><%= f.text_field :description, :value=>@project.description, :class=>"text-field-input" %></p>
 
+<p><%= f.label :tags %>: </p>
+<p><%= f.text_field :tags, :value=>@project.tags_list, :class=>"text-field-input" %></p>
+
 <br>
 
 <p><%= f.radio_button :published, true, :checked=> @project.published %>  <%= f.label :published %></p>
