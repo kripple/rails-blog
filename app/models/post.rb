@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+	include TagsHelper
+
 	has_many :taggings, as: :taggable
 	has_many :tags, through: :taggings
 
@@ -9,10 +11,6 @@ class Post < ActiveRecord::Base
 
 	def to_param
     slug
-  end
-
-  def tags_list
-  	self.tags.each_with_object("") { |obj,elem| elem << obj.name << ", " }.chomp(", ")
   end
 
 	private
