@@ -1,0 +1,16 @@
+<div class="preview-container">
+	<h1 class="title"><%= link_to(@post.title, post_path(@post) ) %></h1>
+	<p><%=@post.description%></p>
+	<%= render "tags/taggable", taggable: @post %>
+</div>
+
+<div class="preview-container">
+  <h1 class="title"><%=@post.title%></h1>
+	<p class="date"><%=@post.date%></p>
+	<p class="body"><%=@post.body.html_safe%></p>
+	<%= render "tags/taggable", taggable: @post %>
+</div>
+
+
+
+	

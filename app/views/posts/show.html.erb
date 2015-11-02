@@ -3,7 +3,7 @@
 	<p class="date"><%=@post.date%></p>
 	<p class="body"><%=@post.body.html_safe%></p>
 
-	<%= render "tags/tag", taggable: @post %>
+	<%= render "tags/taggable", taggable: @post %>
 </div>
 
 
