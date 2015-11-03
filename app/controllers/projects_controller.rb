@@ -29,7 +29,7 @@ class ProjectsController < ApplicationController
     find_project
     if @project.update_attributes(project_params) 
       @project.add_tags(params[:project][:tags])
-      redirect_to :projects
+      redirect_to edit_project_path(@project)
     else
       flash[:errors] = @project.errors.full_messages
       render :edit
