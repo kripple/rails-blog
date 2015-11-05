@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :redirect_unless_authorized, only: [:new, :create, :edit, :update]
+  before_action :find_tags, only: [:new, :create, :edit, :update]
 
 	def index
 		@projects = Project.all.where(published: true).order(created_at: :desc) 
@@ -47,6 +48,10 @@ class ProjectsController < ApplicationController
 
   def find_project 
     @project = Project.find_by_slug(params[:id])
+  end
+
+  def find_tags
+    @tags = Tag.all
   end
 end
 

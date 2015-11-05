@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :redirect_unless_authorized, only: [:new, :create, :edit, :update]
+  before_action :find_tags, only: [:new, :create, :edit, :update]
 
   def index
     @posts = Post.all.where(published: true).order(created_at: :desc)
@@ -51,5 +52,9 @@ class PostsController < ApplicationController
 
   def find_post 
     @post = Post.find_by_slug(params[:id])
+  end
+
+  def find_tags
+    @tags = Tag.all
   end
 end
