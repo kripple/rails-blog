@@ -1,9 +1,7 @@
-<div class="container">
-	<%= flash[:error] if flash[:error] %>
-	<%= form_for(:user_session, url: :dashboard) do |f| %>
-		<div id="login"><%= f.password_field :password, :class=>"round"%></div>
-	<% end %>
-</div>
+<%= form_for(:user_session, url: :dashboard) do |f| %>
+	<div id="login"><%= f.password_field :password, :class=>"password round"%></div>
+<% end %>
+
 
 
 
