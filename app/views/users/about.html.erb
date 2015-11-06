@@ -4,9 +4,9 @@
 		<%= form_for(:user, url: users_path) do |f| %>
 			<p><%= f.text_area :about, :class=>"text-area-input"%></p>
 			<p><%= @user.errors[:about].first if @user %></p>
-			<p><%= f.submit "Save Changes" %></p>
+			<p><%= f.submit "Save Changes", :class=>"submit-button" %></p>
 		<% end %>
-		<p><button class="preview">Preview Changes</button></p>
+		<p><button class="preview submit-button">Preview Changes</button></p>
 
 	<% else %>
 

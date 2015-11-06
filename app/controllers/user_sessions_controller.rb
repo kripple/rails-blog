@@ -2,7 +2,7 @@ class UserSessionsController < ApplicationController
   def new
     redirect_to :dashboard and return if logged_in?
   	@user = User.new
-    render layout: false if request.xhr?
+    render layout: !request.xhr?
   end
 
   def create

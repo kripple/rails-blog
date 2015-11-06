@@ -58,6 +58,7 @@ a.tag {
 	padding: 1px 3px;
 	color: $dark-beige;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 a.tag:hover {
@@ -87,7 +88,7 @@ div.field_with_errors {
   display: inline;
 }
 
-input.submit-button {
+.submit-button {
 	background-color: white;
 	color: $charcoal;
 	border: 1px solid $charcoal;

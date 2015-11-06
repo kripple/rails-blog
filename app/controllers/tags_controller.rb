@@ -17,6 +17,16 @@ class TagsController < ApplicationController
     end
   end
 
+  def destroy
+    tag = Tag.find_by(id: params[:id])
+    if tag && tag.taggings.empty?
+      tag.destroy
+    elsif tag
+      flash[:error] = "Please remove tag from posts and projects before deleting"
+    end
+    render layout: !request.xhr?
+  end
+
   private
 
 	def tag_params

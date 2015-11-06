@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   resources :users, only: [:create, :update]
   resources :posts
   resources :projects
-  resources :tags, only: [:new, :create]
+  resources :tags, only: [:new, :create, :destroy]
 
 end
