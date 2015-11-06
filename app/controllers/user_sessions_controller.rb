@@ -9,15 +9,13 @@ class UserSessionsController < ApplicationController
   	user = User.find_by(name: "Kelly")
 		if user && user.authenticate(user_session_params[:password])
 		  login_user(user)
-      redirect_to :dashboard
-    else
-      redirect_to :root
     end
+    redirect_to :root
   end
 
   def destroy
   	logout_user
-    redirect_to root_path
+    redirect_to :root
   end
 
   private

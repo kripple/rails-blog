@@ -6,6 +6,7 @@ function initLogin() {
 		var url = target.attr('href')
 		$.ajax(url).done(function(data){
 			elem.after(data);
+			$(".password").focus();
 			elem.remove();
 		}).fail(function(){
 			console.log("Failed to retrieve data");
