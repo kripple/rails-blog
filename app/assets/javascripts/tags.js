@@ -16,4 +16,3 @@ function initDeleteTags() {
 };
 
 
-// function getValue(finderStr, classStr)
