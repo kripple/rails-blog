@@ -1,8 +1,11 @@
 <div class="container">
-	<% if logged_in? && @unpublished.length > 0 %>
-		<div class="unpublished-container">
-    	<%= render @unpublished %>
-    </div>
+	<% if logged_in? %>
+		<div class="dashboard-buttons"><%= link_to("New Post", new_post_path) %></div>
+		<% if @unpublished.length > 0 %>
+			<div class="unpublished-container">
+	    	<%= render @unpublished %>
+	    </div>
+    <% end %>
   <% end %>
 	<%= render @posts %>
 </div>
