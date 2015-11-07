@@ -1,23 +1,17 @@
 <div id="about" class="container">
 	<% if logged_in? %>
-
 		<%= form_for(:user, url: users_path) do |f| %>
 			<p><%= f.text_area :about, :class=>"text-area-input"%></p>
 			<p><%= @user.errors[:about].first if @user %></p>
 			<p><%= f.submit "Save Changes", :class=>"submit-button" %></p>
 		<% end %>
-		<p><button class="preview submit-button">Preview Changes</button></p>
-
 	<% else %>
-
 	  <%= @user.about.html_safe %>
-
 	  <div class="pic-container">
 	  	<div class="circle-crop">
 	  		<%= image_tag("headshot.png", :id => "headshot") %>
 	  	</div>
 	  </div>
-
 	<% end %>
 </div>
 
