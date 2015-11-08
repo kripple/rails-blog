@@ -17,9 +17,11 @@ $red: #991D08;
 	font-family: 'Cinzel', serif;
 	font-size: 20px;
 	padding-top: 10px;
+	z-index: 40;
 }
 
 #header a {
+	z-index: -50;
 	color: $dark-beige;
 	text-decoration: none;
 }
