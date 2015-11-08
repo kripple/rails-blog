@@ -76,9 +76,16 @@ a.tag:hover {
   padding: 5px;
 }
 
+.text-area-input {
+  width: 800px;
+  height: 300px;
+  font-size: 14px;
+  color: $charcoal;
+  padding: 5px;
+}
+
 .unpublished-container {
 	opacity: 0.3;
-	border-bottom: 1px solid;
 }
 
 .flash-errors {
@@ -91,6 +98,7 @@ div.field_with_errors {
 
 .submit-button {
 	background-color: white;
+	text-decoration: none;
 	color: $charcoal;
 	border: 1px solid $charcoal;
 	border-radius: 2px;

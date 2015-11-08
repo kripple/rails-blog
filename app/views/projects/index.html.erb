@@ -6,8 +6,8 @@
   <% end %>
 	<%= render @projects %>
   <% if logged_in? %>
-  	<hr>
-		<div class="dashboard-buttons"><%= link_to("New Project", new_project_path) %></div>
+    <br>
+		<p><%= link_to("New Project", new_project_path, :class=>"submit-button") %></p>
   <% end %>
 </div>
 
