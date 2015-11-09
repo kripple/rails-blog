@@ -12,6 +12,43 @@ function initDeleteTags() {
 			console.log("Failed to delete tag.");
 		});
 	});
+};
+
+function initAddRemoveTags() {
+	
+	// for all tags in current-tags div, remove corresponding tag in available-tags div
+	$('.current-tags').children().each(function(index, object){
+		var id = getValue("tag-id-", object.className);
+		$('.available-tags').children('.tag-id-' + id).remove();
+	});
+
+	$('.available-tags').on('click', '.add-tag', function(e){
+		// move tag from available-tags to current-tags
+		var tag = $(this);
+		tag.addClass('remove-tag');
+		tag.removeClass('add-tag');
+		$('.current-tags').append(tag);
+	});
+
+	$('.current-tags').on('click', '.remove-tag', function(e){
+		// move tag from current-tags to available-tags 
+		// debugger
+		var tag = $(this);
+		tag.addClass('add-tag');
+		tag.removeClass('remove-tag');
+		$('.available-tags').append(tag);
+	});
+
+	$(".taggable-form").on('submit', function(e){
+		debugger // var url = 
+		var taggable = $(".submit-button").val();
+		var taggableType = getTaggableType(taggable);
+
+		// for all the tag names in current-tags div, insert into form with gsub $
+		// trigger form submit
+		// then redirect to appropriate (post/project) index page
+		
+	});
 
 };
 

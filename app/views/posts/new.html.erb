@@ -1,5 +1,5 @@
 <div class="container">
-	<%= form_for @post do |f| %>
+	<%= form_for @post, :class=>"taggable-form" do |f| %>
 		<%= render "form", { f: f } %>
 		<p><%= f.submit "Create Post", :class=>"submit-button" %></p>
 	<% end %>

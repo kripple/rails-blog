@@ -17,6 +17,11 @@ class TagsController < ApplicationController
     end
   end
 
+  # #  {"type"=>"Post", "controller"=>"tags", "action"=>"add", "id"=>"1"}
+  # def add
+  #   binding.pry
+  # end
+
   def destroy
     tag = Tag.find_by(id: params[:id])
     if tag && tag.taggings.empty?

@@ -11,3 +11,11 @@ function getValue(finderStr, classStr) {
     };
   };
 }; 
+
+function getTaggableType(taggable) {
+  if (taggable == "Create Post") {
+    return "Post";
+  } else if (taggable == "Create Project") {
+    return "Project";
+  };
+};
