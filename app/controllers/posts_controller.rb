@@ -16,9 +16,10 @@ class PostsController < ApplicationController
   end
 
   def create
+    binding.pry
     @post = Post.create(post_params)
     if @post.save
-      # @post.add_tags(params[:post][:tags])
+      @post.add_tags(params[:tag][:ids])
       redirect_to :posts
     else
       flash[:errors] = @post.errors.full_messages
@@ -31,6 +32,7 @@ class PostsController < ApplicationController
   end 
 
   def update
+    binding.pry
     find_post
     if @post.update_attributes(post_params) 
       # @post.add_tags(params[:post][:tags])

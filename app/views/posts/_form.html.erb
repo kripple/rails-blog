@@ -21,7 +21,7 @@
 <p>Available Tags (click to add):</p>
 <div class="available-tags"><%= render "tags/add" %></div>
 
-<%= hidden_field( @new_tags, $tags ) %>
+<%= hidden_field(:tag, :ids) %>
 
 <br><br>
 

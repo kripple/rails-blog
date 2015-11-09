@@ -12,13 +12,21 @@ module TagsHelper
   end
 
   # def add_tag(name)
-    
+
   # end
 
-  def add_tags(list)
+  def add_tags(array)
+    remove_current_taggings
+
   	list.split(/ *, */).each do |tag_name|
   		tag = Tag.find_by(name: tag_name) || Tag.create(name: tag_name)
   		self.tags << tag unless self.tags.any? { |t| t.name == tag_name }
   	end
+  end
+
+  private
+
+  def remove_current_taggings
+    binding.pry
   end
 end

@@ -12,6 +12,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
+    binding.pry
     @project = Project.create(project_params)
     if @project.save
       # @project.add_tags(params[:project][:tags])
@@ -27,6 +28,7 @@ class ProjectsController < ApplicationController
   end
 
   def update
+    binding.pry
     find_project
     if @project.update_attributes(project_params) 
       # @project.add_tags(params[:project][:tags])
