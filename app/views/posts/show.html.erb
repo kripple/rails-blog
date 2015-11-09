@@ -2,7 +2,7 @@
   <h1 class="title"><%=@post.title%></h1>
 	<p class="date"><%=@post.date%></p>
 	<p class="body"><%=@post.body.html_safe%></p>
-
+	<br>
 	<%= render "tags/taggable", taggable: @post %>
 </div>
 
