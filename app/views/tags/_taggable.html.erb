@@ -1,3 +1,4 @@
 <% taggable.tags.each do |tag| %>
-	<a class="tag filter"><%= tag.name %></a>
+	<a href=<%=taggable.filter_path%> class="tag filter"><%= tag.name %></a>
 <% end %>
+

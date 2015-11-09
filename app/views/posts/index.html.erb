@@ -1,5 +1,5 @@
 <div class="container">
-	<% render @unpublished if logged_in? && @unpublished.length > 0 %>
+	<%= render @unpublished if logged_in? && @unpublished.length > 0 %>
 	<%= render @posts %>
   <% if logged_in? %>
     <br>

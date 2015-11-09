@@ -7,9 +7,6 @@ module TagsHelper
 		self.taggable_type + "s/filter"
 	end
 
-	
-  
-
   def add_tags(array)
     remove_current_taggings
     array.split(",").each { |id| self.tags << Tag.find_by(id: id) }
