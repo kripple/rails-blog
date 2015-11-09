@@ -9,8 +9,10 @@
 			<% if logged_in? %>
 		    <%= link_to("logout", logout_path, method: :delete, :id=>"logout") %>
 		  <% else %>
-		    <%=link_to("© 2015 Kelly Ripple", :login, :id=>"copyright")%>
+		    <%=link_to("Copyright © 2015 Kelly Ripple", :login, :id=>"copyright")%>
 		  <% end %>
 		</div>
 	</footer>
 </div>
+
+
