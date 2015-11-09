@@ -1,11 +1,7 @@
 module TagsHelper
-	def taggable_type
-		"#{self.class.name.downcase}"
-	end
-
-	def filter_path
-		self.taggable_type + "s/filter"
-	end
+  def filter_url(tag)
+    "/#{self.class.name.downcase}s/filter/#{tag.slug}"
+  end
 
   def add_tags(array)
     remove_current_taggings

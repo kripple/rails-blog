@@ -38,6 +38,9 @@ class ProjectsController < ApplicationController
   end
 
 	def filter
+    projects = Project.where(published: true).order(created_at: :desc)
+    @projects = projects.joins(:tags).where(:tags=> {:slug=>params[:slug]})
+    render :index
   end
 
 	private
