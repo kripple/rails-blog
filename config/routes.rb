@@ -8,10 +8,8 @@ Rails.application.routes.draw do
 
   post 'posts/filter' => 'posts#filter'
   post 'projects/filter' => 'projects#filter'
-
-  # post 'tags/add/:id' => 'tags#add'
   
-  resources :users, only: [:create, :update]
+  resources :users, only: [:update]
   resources :posts
   resources :projects
   resources :tags, only: [:new, :create, :destroy]

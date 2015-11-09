@@ -1,14 +1,17 @@
 class UsersController < ApplicationController
-	before_action :authorize, only: [:create]
+	before_action :redirect_unless_authorized, only: [:update]
 
 	def about
 		@user = User.find_by(name: "Kelly")
 	end
 
-	def create
+	def update
 		@user = User.find_by(name: "Kelly")
-		@user.update_attributes(about: user_params[:about]) 
-		redirect_to :about
+		if @user.update_attributes(about: user_params[:about]) 
+			redirect_to :root
+		else
+			render :about
+		end
 	end
 
 	private

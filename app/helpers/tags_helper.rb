@@ -7,13 +7,8 @@ module TagsHelper
 		self.taggable_type + "s/filter"
 	end
 
-	def tags_list
-  	self.tags.each_with_object("") { |obj,elem| elem << obj.name << ", " }.chomp(", ")
-  end
-
-  # def add_tag(name)
-
-  # end
+	
+  
 
   def add_tags(array)
     remove_current_taggings
