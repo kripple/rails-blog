@@ -31,10 +31,9 @@ class PostsController < ApplicationController
   end 
 
   def update
-    binding.pry
     find_post
     if @post.update_attributes(post_params) 
-      # @post.add_tags(params[:post][:tags])
+      @post.add_tags(params[:tag][:ids])
       redirect_to edit_post_path(@post)
     else
       flash[:errors] = @post.errors.full_messages

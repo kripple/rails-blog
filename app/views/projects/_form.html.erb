@@ -12,10 +12,18 @@
 <p><%= f.label :description %>: </p>
 <p><%= f.text_field :description, :value=>@project.description, :class=>"text-field-input" %></p>
 
-<p><%= f.label :tags %>: </p>
-<p><%= f.text_field :tags, :value=>@project.tags_list, :class=>"text-field-input" %></p>
-
 <br>
+
+<p>Tags:</p>
+<div class="current-tags"><%= render "tags/remove", taggable: @project if @project %></div>
+<br>
+
+<p>Available Tags (click to add):</p>
+<div class="available-tags"><%= render "tags/add" %></div>
+
+<%= hidden_field(:tag, :ids) %>
+
+<br><br>
 
 <p><%= f.radio_button :published, true, :checked=> @project.published %>  <%= f.label :published %></p>
 <p><%= f.radio_button :published, false, :checked=> !(@project.published) %>  <%= f.label :published , "Unpublished" %></p>
