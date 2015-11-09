@@ -17,16 +17,12 @@ module TagsHelper
 
   def add_tags(array)
     remove_current_taggings
-
-  	list.split(/ *, */).each do |tag_name|
-  		tag = Tag.find_by(name: tag_name) || Tag.create(name: tag_name)
-  		self.tags << tag unless self.tags.any? { |t| t.name == tag_name }
-  	end
+    array.split(",").each { |id| self.tags << Tag.find_by(id: id) }
   end
 
   private
 
   def remove_current_taggings
-    binding.pry
+    self.taggings.destroy_all
   end
 end

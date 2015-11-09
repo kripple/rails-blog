@@ -44,7 +44,7 @@ function initAddRemoveTags() {
 			var id = getValue("tag-id-", object.className);
 			tags.push(id);
 		});
-		$('#tag_id').val(tags)	
+		$('#tag_ids').val(tags)	
 	});
 
 };
