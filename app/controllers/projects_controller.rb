@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
-  before_action :redirect_unless_authorized, only: [:new, :create, :edit, :update]
+  before_action :redirect_unless_authorized, only: [:new, :create, :edit, :update, :destroy]
   before_action :find_tags, only: [:new, :create, :edit, :update]
+  before_action :find_project, only: [:edit, :update, :destroy]
 
 	def index
 		@projects = Project.all.where(published: true).order(created_at: :desc) 
@@ -22,12 +23,7 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def edit
-    find_project
-  end
-
   def update
-    find_project
     if @project.update_attributes(project_params) 
       @project.add_tags(params[:tag][:ids])
       redirect_to :projects
@@ -41,6 +37,12 @@ class ProjectsController < ApplicationController
     projects = Project.where(published: true).order(created_at: :desc)
     @projects = projects.joins(:tags).where(:tags=> {:slug=>params[:slug]})
     render :index
+  end
+
+  def destroy
+    @project.remove_current_taggings
+    @project.destroy
+    redirect_to :projects
   end
 
 	private

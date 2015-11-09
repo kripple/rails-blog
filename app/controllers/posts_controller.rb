@@ -1,14 +1,11 @@
 class PostsController < ApplicationController
-  before_action :redirect_unless_authorized, only: [:new, :create, :edit, :update]
+  before_action :redirect_unless_authorized, only: [:new, :create, :edit, :update, :destroy]
   before_action :find_tags, only: [:new, :create, :edit, :update]
+  before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @posts = Post.all.where(published: true).order(created_at: :desc)
     @unpublished = Post.all.where(published: false).order(created_at: :desc) 
-  end
-
-  def show
-    find_post
   end
 
   def new
@@ -26,12 +23,7 @@ class PostsController < ApplicationController
     end
   end
 
-  def edit
-    find_post
-  end 
-
   def update
-    find_post
     if @post.update_attributes(post_params) 
       @post.add_tags(params[:tag][:ids])
       redirect_to :posts
@@ -45,6 +37,12 @@ class PostsController < ApplicationController
     posts = Post.where(published: true).order(created_at: :desc)
     @posts = posts.joins(:tags).where(:tags=> {:slug=>params[:slug]})
     render :index
+  end
+
+  def destroy
+    @post.remove_current_taggings
+    @post.destroy
+    redirect_to :posts
   end
 
   private

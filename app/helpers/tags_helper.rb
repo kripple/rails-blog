@@ -8,8 +8,6 @@ module TagsHelper
     array.split(",").each { |id| self.tags << Tag.find_by(id: id) }
   end
 
-  private
-
   def remove_current_taggings
     self.taggings.destroy_all
   end
