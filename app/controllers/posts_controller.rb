@@ -40,8 +40,10 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post.remove_current_taggings
-    @post.destroy
+    redirect_to :root and return unless request.xhr?
+    # @post.remove_current_taggings
+    # @post.destroy
+    puts "SUCCESS"
     redirect_to :posts
   end
 

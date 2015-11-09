@@ -110,3 +110,12 @@ input.password {
   bottom: -4px;
 }
 
+.align-right {
+	float: right;
+}
+
+.delete {
+	color: $red;
+	border: 1px solid $red;
+}
+

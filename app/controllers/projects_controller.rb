@@ -40,14 +40,20 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    @project.remove_current_taggings
-    @project.destroy
+    redirect_to :root and return unless request.xhr?
+    # @project.remove_current_taggings
+    # @project.destroy
+    puts "SUCCESS"
     redirect_to :projects
   end
 
-	private
+  # def redirect_unless_xhr # doesn't work as an external method. not sure why
+  #   redirect_to :root and return unless request.xhr?
+  # end
 
-	def project_params
+  private
+
+  def project_params
     params.require(:project).permit(:id,:title, :description, :source, :url, :published)
   end
 

@@ -9,7 +9,9 @@ $(document).ready(function() {
     initAddRemoveTags();
   };
 	
-	
+	if ($(".delete").length) {
+    initDeleteTaggable();
+  };
 
 });
 
