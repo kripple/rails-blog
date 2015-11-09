@@ -34,7 +34,7 @@ class PostsController < ApplicationController
     find_post
     if @post.update_attributes(post_params) 
       @post.add_tags(params[:tag][:ids])
-      redirect_to edit_post_path(@post)
+      redirect_to :posts
     else
       flash[:errors] = @post.errors.full_messages
       render :edit

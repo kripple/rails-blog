@@ -12,7 +12,6 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    binding.pry
     @project = Project.create(project_params)
     if @project.save
       @project.add_tags(params[:tag][:ids])
@@ -28,11 +27,10 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    binding.pry
     find_project
     if @project.update_attributes(project_params) 
       @project.add_tags(params[:tag][:ids])
-      redirect_to edit_project_path(@project)
+      redirect_to :projects
     else
       flash[:errors] = @project.errors.full_messages
       render :edit
