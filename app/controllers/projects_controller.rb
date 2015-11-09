@@ -41,15 +41,10 @@ class ProjectsController < ApplicationController
 
   def destroy
     redirect_to :root and return unless request.xhr?
-    # @project.remove_current_taggings
-    # @project.destroy
-    puts "SUCCESS"
-    redirect_to :projects
+    @project.remove_current_taggings
+    @project.destroy
+    render :nothing => true # BLOGBLOGBLOG
   end
-
-  # def redirect_unless_xhr # doesn't work as an external method. not sure why
-  #   redirect_to :root and return unless request.xhr?
-  # end
 
   private
 

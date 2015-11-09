@@ -1,18 +1,16 @@
 function initDeleteTaggables() {
 	$(".delete").on('click', function(e){
-		// send delete, then redirect 
-
-
-		// var tag = $(this);
-		// var id = getValue("tag-id-",tag.attr('class'))
-		// $.ajax({url: ('/tags/' + id), method: 'delete'}).done(function(data){
-		// 	if (data.length == 0){
-		// 		tag.remove();
-		// 	} else {
-		// 		alert(data);
-		// 	};
-		// }).fail(function(){
-		// 	console.log("Failed to delete tag.");
-		// });
+		e.preventDefault();
+		e.stopImmediatePropagation(); // BLOGBLOGBLOG
+		if (confirm("Are you sure? This action is not reversible.")){
+			$.ajax({url: url, type: 'DELETE'}).done(function() {
+				var url = $(this).attr('href').match(/\/.+\//g)[0].slice(0,-1);
+	      window.location.replace(url); // BLOGBLOGBLOG
+	    }.bind(this)).fail(function() { // BLOGBLOGBLOG
+	      console.log("ERROR: failed to delete");
+	    });
+		};
 	});
 };
+
+

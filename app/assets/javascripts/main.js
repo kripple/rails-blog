@@ -10,7 +10,7 @@ $(document).ready(function() {
   };
 	
 	if ($(".delete").length) {
-    initDeleteTaggable();
+    initDeleteTaggables();
   };
 
 });
