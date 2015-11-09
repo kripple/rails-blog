@@ -1,0 +1,18 @@
+<div id="about" class="container">
+	<% if logged_in? %>
+		<%= form_for(@user) do |f| %>
+			<p><%= f.text_area :about, :class=>"text-area-input"%></p>
+			<p class="flash-errors"><%= @user.errors[:about].first if @user %></p>
+			<p><%= f.submit "Save Changes", :class=>"submit-button" %></p>
+		<% end %>
+	<% else %>
+	  <%= @user.about.html_safe %>
+	  <div class="pic-container">
+	  	<div class="circle-crop">
+	  		<%= image_tag("headshot.png", :id => "headshot") %>
+	  	</div>
+	  </div>
+	<% end %>
+</div>
+
+

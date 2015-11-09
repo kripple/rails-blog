@@ -1,0 +1,18 @@
+<div class="footer-container">
+	<footer id="footer">
+		<nav id="social-media-icons">
+			<%=link_to(image_tag("github.png"), "https://github.com/kripple")%>
+			<%=link_to(image_tag("linkedin.png"), "https://www.linkedin.com/in/kellymripple")%>
+			<%=link_to(image_tag("twitter.png"), "https://twitter.com/krippleffect")%>
+    </nav>
+		<div>
+			<% if logged_in? %>
+		    <%= link_to("logout", logout_path, method: :delete, :id=>"logout") %>
+		  <% else %>
+		    <%=link_to("Copyright © 2015 Kelly Ripple", :login, :id=>"copyright")%>
+		  <% end %>
+		</div>
+	</footer>
+</div>
+
+

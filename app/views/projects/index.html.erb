@@ -1,0 +1,11 @@
+<div class="container">
+	<%= render @unpublished if logged_in? && @unpublished.length > 0 %>
+	<%= render @projects %>
+  <% if logged_in? %>
+    <br>
+		<p><%= link_to("New Project", new_project_path, :class=>"submit-button") %></p>
+  <% end %>
+</div>
+
+
+

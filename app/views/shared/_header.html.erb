@@ -1,0 +1,17 @@
+<header id="header">
+	<nav>
+		<% if logged_in? %>
+			<%= link_to("about", :root) %>
+			<%= link_to("posts", :posts) %>
+			<%= link_to("projects", :projects) %>
+	    <%= link_to("tags", new_tag_path) %>
+	  <% else %>
+		  <%= link_to("about", :root) %>
+			<%= link_to("blog", :posts) %>
+			<%= link_to("projects", :projects) %>
+	    <%= link_to("resume", "/resume.pdf", :target => "_blank") %>
+	  <% end %>
+	</nav>
+</header>
+
+

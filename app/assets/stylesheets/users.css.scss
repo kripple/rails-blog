@@ -1,0 +1,59 @@
+// Color palette
+$light-beige: #DEE8D7;
+$dark-beige: #918773;
+$rasberry: #420A1A;
+$wine: #240001;
+$charcoal: #4C493A;
+$red: #991D08;
+
+img#headshot {
+  height: 100%;
+  width: auto;
+}
+
+div.circle-crop {
+	margin: 0 auto;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: black;
+  transform: rotate(22deg);
+  border: 2px solid black;
+}
+
+.pic-container {
+  margin: 0 auto;
+  height: 250px;
+  width: 250px;
+  padding: 40px 20px 0 20px;
+}
+
+#about {
+  a {
+  font-weight: bold;
+  color: $red;
+  text-decoration: none;
+  }
+  a:hover {
+  color: black;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

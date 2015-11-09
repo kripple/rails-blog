@@ -1,0 +1,27 @@
+<div class="index-container">
+	<% if logged_in? %>
+		<% if !project.published %>
+			<h1 class="project title">DRAFT: <%= link_to(project.title, edit_project_path(project)) %></h1>
+		<% else %>
+			<h1 class="project title"><%= link_to(project.title, edit_project_path(project)) %></h1>
+		<% end %>
+	<% else %>
+		<h1 class="project title"><%= link_to(project.title, project.url) %></h1>
+	<% end %>
+
+	<% if project.source && project.source.length > 0 %>
+		<div class="source-container">
+			<%= link_to("[SOURCE]", project.source, :class=>"source") %>
+		</div>
+	<% end %>
+
+	<p><%=project.description%></p>
+
+	<%= render "tags/taggable", taggable: project %>
+	  
+</div>
+
+
+
+
+

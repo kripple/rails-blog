@@ -1,0 +1,121 @@
+// Color palette
+$light-beige: #DEE8D7;
+$dark-beige: #918773;
+$rasberry: #420A1A;
+$wine: #240001;
+$charcoal: #4C493A;
+$red: #991D08;
+
+// Fonts
+$body-font: 'Armata', sans-serif;
+$header-font: 'Cinzel', serif;
+
+.round {
+	border-radius: 5px;
+}
+
+.container {
+	max-width: 800px;
+	min-width: 300px;
+	margin: 0 auto;
+	padding: 70px 8% 40px 8%;
+	color: $charcoal;
+	font-family: $body-font;
+}
+
+.index-container {
+	padding-bottom: 20px;
+	z-index: 50;
+}
+
+.box-container {
+	border: 1px dotted $charcoal;
+	border-radius: 5px;
+	padding: 10px 15px;
+	margin-top: 10px;
+}
+
+.title a {
+	font-weight: bold;
+	color: $red;
+	text-decoration: none;
+}
+
+.title a:hover {
+	color: black;
+}
+
+h1.title {
+	font-family: $header-font;
+	margin-bottom: 0;
+}
+
+a.tag {
+	display: inline-block;
+	margin-right: 1px;
+	margin-bottom: 5px;
+	border: 1px solid $dark-beige;
+	border-radius: 1px;
+	padding: 1px 3px;
+	color: $dark-beige;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a.tag:hover {
+	border: 2px solid $red;
+	padding: 0px 2px;
+	color: $red;
+}
+
+.text-field-input {
+  width: 800px;
+  height: 20px;
+  font-size: 14px;
+  color: $charcoal;
+  padding: 5px;
+}
+
+.text-area-input {
+  width: 800px;
+  height: 300px;
+  font-size: 14px;
+  color: $charcoal;
+  padding: 5px;
+}
+
+.flash-errors {
+	color: $red;
+}
+
+div.field_with_errors {
+  display: inline;
+}
+
+.submit-button {
+	background-color: white;
+	text-decoration: none;
+	color: $charcoal;
+	border: 1px solid $charcoal;
+	border-radius: 2px;
+	font-family: $body-font;
+	padding:8px;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+input.password {
+	position: absolute;
+  left: -125px;
+  bottom: -4px;
+}
+
+.align-right {
+	float: right;
+}
+
+.delete {
+	color: $red;
+	border: 1px solid $red;
+}
+

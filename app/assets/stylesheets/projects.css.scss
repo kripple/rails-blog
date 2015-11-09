@@ -1,0 +1,29 @@
+// Color palette
+$light-beige: #DEE8D7;
+$dark-beige: #918773;
+$rasberry: #420A1A;
+$wine: #240001;
+$charcoal: #4C493A;
+$red: #991D08;
+
+a.source {
+	font-weight: bold;
+	color: $red;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+a.source:hover {
+	color: black;
+}
+
+h1.project {
+	display: inline-block;
+}
+
+div.source-container {
+	vertical-align: top;
+	display: inline-block;
+	padding-left: 20px;
+	padding-top: 32px;
+}

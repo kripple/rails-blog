@@ -1,0 +1,35 @@
+<%= hidden_field( @post, :id ) %>
+
+<p><%= f.label :title %>: </p>
+<p><%= f.text_field :title, :value=>@post.title, :class=>"text-field-input" %></p>
+
+<p><%= f.label :date %>: </p>
+<p><%= f.text_field :date, :value=>@post.date, :class=>"text-field-input" %></p>
+
+<p><%= f.label :description %>: </p>
+<p><%= f.text_field :description, :value=>@post.description, :class=>"text-field-input" %></p>
+
+<p><%= f.label :body %>: </p>
+<p><%= f.text_area :body, :value=>@post.body, :class=>"text-area-input" %></p>
+
+<br>
+
+<p>Tags:</p>
+<div class="current-tags"><%= render "tags/remove", taggable: @post if @post %></div>
+<br>
+
+<p>Available Tags (click to add):</p>
+<div class="available-tags"><%= render "tags/add" %></div>
+
+<%= hidden_field(:tag, :ids) %>
+
+<br><br>
+
+<p><%= f.radio_button :published, true, :checked=> @post.published %>  <%= f.label :published %></p>
+<p><%= f.radio_button :published, false, :checked=> !(@post.published) %>  <%= f.label :published , "Unpublished" %></p>
+
+<br>
+
+<p class="flash-errors"><%= flash[:errors].first if flash[:errors] %></p>
+
+

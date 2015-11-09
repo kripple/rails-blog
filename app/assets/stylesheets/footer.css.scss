@@ -1,0 +1,65 @@
+// Color palette
+$light-beige: #DEE8D7;
+$dark-beige: #918773;
+$rasberry: #420A1A;
+$wine: #240001;
+$charcoal: #4C493A;
+$red: #991D08;
+
+.footer-container {
+	max-width: 800px;
+	min-width: 300px;
+	margin: 0 auto;
+	padding: 0 8% 20px 8%;
+	color: $charcoal;
+	font-family: 'Armata', sans-serif;
+}
+
+#footer {
+	position: relative;
+	padding: 0 0 20px 0;
+	height: 40px;
+	vertical-align: top;
+}
+
+#footer div {
+	position: absolute;
+	padding-left: 20px;
+	display: inline-block;
+	left: 150px;
+	top: 15px;
+	white-space: nowrap;
+}
+
+#footer nav#social-media-icons {
+	position: absolute;
+	display: inline-block;
+}
+
+#footer nav#social-media-icons img {
+	display: inline-block;
+	width:35px;
+	height:35px;
+	margin:5px;
+	opacity: 0.8;
+}
+
+a#copyright {
+	color: $charcoal;
+	text-decoration: none;
+}
+
+a#copyright:hover {
+	cursor: default;
+}
+
+a#logout {
+	color: $rasberry;
+	text-decoration: none;
+}
+
+
+
+
+
+

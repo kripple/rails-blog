@@ -1,0 +1,18 @@
+// Color palette
+$light-beige: #DEE8D7;
+$dark-beige: #918773;
+$rasberry: #420A1A;
+$wine: #240001;
+$charcoal: #4C493A;
+$red: #991D08;
+
+.login {
+  color: $rasberry;
+	border: 1px solid $rasberry;
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px $dark-beige;
+	width: 40px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
