@@ -15,7 +15,7 @@
 		</div>
 	<% end %>
 
-	<p><%=project.description%><% if @project.date %> | <%=post.date%><% end %></p>
+	<p><%=project.description%><% if project.date %> | <%=project.date%><% end %></p>
 
 	<%= render "tags/taggable", taggable: project %>
 	  
