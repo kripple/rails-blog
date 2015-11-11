@@ -5,7 +5,7 @@ User.create(
 
   <p>I love dogs, yoga, and science fiction novels. I used to work as a Yoga Assistant at <a href='http://downdogyoga.com/'>Down Dog Yoga</a> in Georgetown and I most recently finished <a href='https://en.wikipedia.org/wiki/Saturn%27s_Children_(novel)'>Saturn's Children</a> by Charles Stross.</p>
 
-  <p>If you are interested in reading about my experiences with Dev Bootcamp, check out my <a href='http://kellyripple.com/posts'>blog</a>. I post about my experiences, cultural issues, and technical topics.</p>"
+  <p>If you are interested in reading about my experiences with Dev Bootcamp, check out my <a href='/posts'>blog</a>. I post about my experiences, cultural issues, and technical topics.</p>"
   )
 
 # make tags
