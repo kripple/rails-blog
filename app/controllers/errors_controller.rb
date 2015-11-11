@@ -1,4 +1,4 @@
-class ErrorsController < ApplicationController::Base
+class ErrorsController < ActionController::Base
   def not_found
   	# render layout: false
   end
