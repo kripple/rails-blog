@@ -13,6 +13,10 @@ $(document).ready(function() {
     initDeleteTaggables();
   };
 
+  if ($(".text-field-input").length || $(".text-area-input").length) {
+    addFocus();
+  };
+
 });
 
 

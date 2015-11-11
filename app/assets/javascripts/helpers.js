@@ -12,3 +12,11 @@ function getValue(finderStr, classStr) {
   };
 }; 
 
+function addFocus() {
+  if ($(".text-field-input").length) {
+    $(".text-field-input").first().focus();
+  } else {
+    $(".text-area-input").first().focus();
+  };
+};
+
