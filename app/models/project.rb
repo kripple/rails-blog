@@ -4,7 +4,7 @@ class Project < ActiveRecord::Base
 	has_many :taggings, as: :taggable
 	has_many :tags, through: :taggings
 	
-	validates :title, :description, :url, :presence => true
+	validates :title, :description, :url, :date, :presence => true
 	validates :title, :url, :uniqueness => true
 
 	before_save :generate_slug
