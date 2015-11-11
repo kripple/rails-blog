@@ -8,7 +8,7 @@
 	<% else %>
 		<h1 class="title"><%= link_to(post.title, post_path(post) ) %></h1>
 	<% end %>
-	<p><%=post.description%></p>
+	<p><%=post.description%> | <%=post.date%></p>
 
 	<%= render "tags/taggable", taggable: post %>
 </div>
