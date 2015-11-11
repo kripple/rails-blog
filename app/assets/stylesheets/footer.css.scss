@@ -31,11 +31,6 @@ $red: #991D08;
 	white-space: nowrap;
 }
 
-#footer nav#social-media-icons {
-	position: absolute;
-	display: inline-block;
-}
-
 #footer nav#social-media-icons img {
 	display: inline-block;
 	width:35px;
@@ -58,7 +53,17 @@ a#logout {
 	text-decoration: none;
 }
 
+@media screen and (min-width: 500px) {
+	#footer nav#social-media-icons {
+		position: absolute;
+		display: inline-block;
+	}
+}
+
 @media screen and (max-width: 500px) {
+	#footer nav#social-media-icons {
+		text-align: center;
+	}
 	#copyright {
 		display: none;
 	}  
