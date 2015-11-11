@@ -43,6 +43,19 @@ $red: #991D08;
   white-space: nowrap;
 }
 
+.login-error {
+	left: 0;
+	right: 0;
+  height: 140px;
+  background-color: $red;
+  text-align: center;
+  padding-top: 75px;
+  color: $light-beige;
+  opacity: 0.9;
+  font-size: 45px;
+  margin-top: 15%;
+}
+
 
 
 

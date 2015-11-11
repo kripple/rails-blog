@@ -6,9 +6,13 @@ class UserSessionsController < ApplicationController
   end
 
   def create
-  	user = User.find_by(name: "Kelly")
-		if user && user.authenticate(user_session_params[:password])
-		  login_user(user)
+  	user = User.find_by(name: "Kelly")     
+		if user 
+      if user.authenticate(user_session_params[:password])
+		    login_user(user)
+      else
+        flash[:login_error] = "Wrong"
+      end
     end
     redirect_to :root
   end

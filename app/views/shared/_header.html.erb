@@ -12,6 +12,9 @@
 	    <%= link_to("resume", "/resume.pdf", :target => "_blank") %>
 	  <% end %>
 	</nav>
+	<% if flash[:login_error] %>
+		<p class="login-error"><%= flash[:login_error] %></p>
+	<% end %>
 </header>
 
 
