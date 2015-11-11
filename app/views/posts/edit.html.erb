@@ -3,6 +3,7 @@
 		<%= render "form", { f: f } %>
 		<p>
 			<%= f.submit "Save Changes", :class=>"submit-button" %>
+			<%= link_to("View Changes", post_path(@post), :class=>"submit-button") %>
 			<%= link_to("Delete Post", post_path(@post), method: :delete, :class=>"submit-button delete align-right") %>
 		</p>
 	<% end %>
