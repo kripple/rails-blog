@@ -7,7 +7,7 @@
     </nav>
 		<div>
 			<% if logged_in? %>
-		    <%= link_to("logout", logout_path, method: :delete, :id=>"logout") %>
+		    <%= link_to("logout", logout_path, method: :delete, :id=>"logout", :class=>"align-right") %>
 		  <% else %>
 		    <%=link_to("Copyright © 2015 Kelly Ripple", :login, :id=>"copyright", :class=>"align-right")%>
 		  <% end %>
