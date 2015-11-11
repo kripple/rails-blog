@@ -1,11 +1,20 @@
 class PostsController < ApplicationController
   before_action :redirect_unless_authorized, only: [:new, :create, :edit, :update, :destroy]
   before_action :find_tags, only: [:new, :create, :edit, :update]
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :find_post, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.all.where(published: true).order(created_at: :desc)
     @unpublished = Post.all.where(published: false).order(created_at: :desc) 
+  end
+
+  def show
+    post = Post.find_by_slug(params[:id])
+    if post.published || ( !post.published && logged_in? )
+      @post = post
+    else
+      not_found
+    end
   end
 
   def new
