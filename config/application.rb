@@ -25,9 +25,5 @@ module Blog
 
     # Handle errors in-app
     config.exceptions_app = self.routes
-
-    # config.assets.compile = true
-    # config.assets.digest = true
-    # config.serve_static_files = true
   end
 end
