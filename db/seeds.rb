@@ -121,6 +121,7 @@ rails = Tag.create(name:"Ruby on Rails")
 
 p = Project.create(
 	title: "Hangman",
+  date: "July 2015",
 	description: "A simple Hangman app.",
 	url: "http://kripple.github.io/projects/hangman/hangman.html",
 	source: "https://github.com/kripple/kripple.github.io/tree/master/projects/hangman",
@@ -132,6 +133,7 @@ Tagging.create(tag: js, taggable_type: Project, taggable_id: p.id)
 
 p = Project.create(
   title: "Unicorns on Rails",
+  ate: "September 2015",
   description: "A basic Rails CRUD app. Explores the functionality of the Devise and Ransack Gems.",
   url: "http://unicorns-on-rails.herokuapp.com/",
   published: true)
@@ -145,6 +147,7 @@ Tagging.create(tag: rails, taggable_type: Project, taggable_id: p.id)
 
 p = Project.create(
 	title: "Flash Cards",
+  ate: "August 2015",
 	description: "Study and play trivia with user-generated flashcards.",
 	url: "http://the-flash-cards.herokuapp.com/",
 	published: true)
