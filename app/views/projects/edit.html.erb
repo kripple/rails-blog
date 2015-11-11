@@ -3,7 +3,7 @@
 		<%= render "form", { f: f } %>
 		<p>
 			<%= f.submit "Save Changes", :class=>"submit-button" %>
-			<%= link_to("Delete Project", project_path(@project), method: :delete, :class=>"submit-button delete align-right") %>
+			<%= link_to("Delete Project", project_path(@project), method: :delete, :class=>"submit-button delete") %>
 		</p>
 	<% end %>
 </div>
