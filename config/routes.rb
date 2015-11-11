@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   resources :projects
   resources :tags, only: [:new, :create, :destroy]
 
+  match '/404', :to => 'errors#not_found', via: [:get, :post]
+  match '/422', :to => 'errors#unprocessable_entity', via: [:get, :post]
+  match '/500', :to => 'errors#internal_error', via: [:get, :post]
+
 end
