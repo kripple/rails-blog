@@ -13,3 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require syntax-highlighter-rails/shCore
+//= require syntax-highlighter-rails/shBrushCpp

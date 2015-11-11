@@ -17,6 +17,10 @@ $(document).ready(function() {
     addFocus();
   };
 
+  if ($("pre").length) {
+    SyntaxHighlighter.all();
+  };
+
 });
 
 
