@@ -1,0 +1,395 @@
+/* line 1, /Users/kellyripple/clones/blog/app/assets/stylesheets/content_imgs.css.scss */
+.godaddy-img-one {
+  width: 40%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #3F3E40;
+}
+
+/* line 7, /Users/kellyripple/clones/blog/app/assets/stylesheets/content_imgs.css.scss */
+.godaddy-img-two {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #3F3E40;
+}
+/* line 1, /Users/kellyripple/clones/blog/app/assets/stylesheets/content_tables.css.scss */
+table {
+  border-collapse: collapse;
+}
+
+/* line 4, /Users/kellyripple/clones/blog/app/assets/stylesheets/content_tables.css.scss */
+td.first-column {
+  width: 20%;
+}
+
+/* line 7, /Users/kellyripple/clones/blog/app/assets/stylesheets/content_tables.css.scss */
+tr {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+/* line 11, /Users/kellyripple/clones/blog/app/assets/stylesheets/content_tables.css.scss */
+tr, td {
+  padding: 10px;
+}
+/* line 1, /Users/kellyripple/clones/blog/app/assets/stylesheets/content_text.css.scss */
+code {
+  background-color: #E3E0E5;
+  font-family: courier;
+  padding: 1px 5px 1px 5px;
+  white-space: pre-wrap;
+  display: inline-block;
+}
+/* line 9, /Users/kellyripple/clones/blog/app/assets/stylesheets/footer.css.scss */
+.footer-container {
+  max-width: 800px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 0 8% 20px 8%;
+  color: #4C493A;
+  font-family: 'Armata', sans-serif;
+}
+
+/* line 18, /Users/kellyripple/clones/blog/app/assets/stylesheets/footer.css.scss */
+#footer {
+  position: relative;
+  padding: 0 0 20px 0;
+  height: 40px;
+  vertical-align: top;
+}
+
+/* line 25, /Users/kellyripple/clones/blog/app/assets/stylesheets/footer.css.scss */
+#footer div {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  top: 15px;
+  white-space: nowrap;
+}
+
+/* line 33, /Users/kellyripple/clones/blog/app/assets/stylesheets/footer.css.scss */
+#footer nav#social-media-icons img {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  opacity: 0.8;
+}
+
+/* line 41, /Users/kellyripple/clones/blog/app/assets/stylesheets/footer.css.scss */
+a#copyright {
+  color: #4C493A;
+  text-decoration: none;
+}
+
+/* line 46, /Users/kellyripple/clones/blog/app/assets/stylesheets/footer.css.scss */
+a#copyright:hover {
+  cursor: default;
+}
+
+/* line 50, /Users/kellyripple/clones/blog/app/assets/stylesheets/footer.css.scss */
+a#logout {
+  color: #420A1A;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 500px) {
+  /* line 56, /Users/kellyripple/clones/blog/app/assets/stylesheets/footer.css.scss */
+  #footer nav#social-media-icons {
+    position: absolute;
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 63, /Users/kellyripple/clones/blog/app/assets/stylesheets/footer.css.scss */
+  #footer nav#social-media-icons {
+    text-align: center;
+  }
+
+  /* line 66, /Users/kellyripple/clones/blog/app/assets/stylesheets/footer.css.scss */
+  #copyright {
+    display: none;
+  }
+}
+/* line 71, /Users/kellyripple/clones/blog/app/assets/stylesheets/footer.css.scss */
+input.password {
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+}
+/* line 9, /Users/kellyripple/clones/blog/app/assets/stylesheets/header.css.scss */
+#header {
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 40px;
+  background-color: #240001;
+  box-shadow: 2px 2px 5px #918773;
+  position: fixed;
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  padding-top: 10px;
+  z-index: 40;
+}
+
+/* line 23, /Users/kellyripple/clones/blog/app/assets/stylesheets/header.css.scss */
+#header a {
+  z-index: -50;
+  color: #918773;
+  text-decoration: none;
+}
+
+/* line 29, /Users/kellyripple/clones/blog/app/assets/stylesheets/header.css.scss */
+#header a:hover {
+  color: #DEE8D7;
+}
+
+/* line 33, /Users/kellyripple/clones/blog/app/assets/stylesheets/header.css.scss */
+#header nav {
+  max-width: 800px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+/* line 39, /Users/kellyripple/clones/blog/app/assets/stylesheets/header.css.scss */
+#header nav a {
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* line 46, /Users/kellyripple/clones/blog/app/assets/stylesheets/header.css.scss */
+.login-error {
+  left: 0;
+  right: 0;
+  height: 140px;
+  background-color: #991D08;
+  text-align: center;
+  padding-top: 75px;
+  color: #DEE8D7;
+  opacity: 0.9;
+  font-size: 45px;
+  margin-top: 15%;
+}
+/* line 9, /Users/kellyripple/clones/blog/app/assets/stylesheets/projects.css.scss */
+a.source {
+  font-weight: bold;
+  color: #991D08;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* line 16, /Users/kellyripple/clones/blog/app/assets/stylesheets/projects.css.scss */
+a.source:hover {
+  color: black;
+}
+
+/* line 20, /Users/kellyripple/clones/blog/app/assets/stylesheets/projects.css.scss */
+h1.project {
+  display: inline-block;
+}
+
+@media screen and (min-width: 600px) {
+  /* line 25, /Users/kellyripple/clones/blog/app/assets/stylesheets/projects.css.scss */
+  div.source-container {
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 20px;
+    padding-top: 32px;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 34, /Users/kellyripple/clones/blog/app/assets/stylesheets/projects.css.scss */
+  div.source-container {
+    padding-top: 10px;
+    display: block;
+  }
+}
+/* line 13, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+p {
+  line-height: 150%;
+}
+
+/* line 17, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+.round {
+  border-radius: 5px;
+}
+
+/* line 21, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+.container {
+  max-width: 800px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 70px 8% 40px 8%;
+  color: #4C493A;
+  font-family: "Armata", sans-serif;
+}
+
+/* line 30, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+.index-container {
+  padding-bottom: 20px;
+  z-index: 50;
+}
+
+/* line 35, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+.box-container {
+  border: 1px dotted #4C493A;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 10px;
+}
+
+/* line 42, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+.title a {
+  font-weight: bold;
+  color: #991D08;
+  text-decoration: none;
+}
+
+/* line 48, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+.title a:hover {
+  color: black;
+}
+
+/* line 52, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+h1.title {
+  font-family: "Cinzel", serif;
+  margin-bottom: 0;
+}
+
+/* line 57, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+a.tag {
+  display: inline-block;
+  margin-right: 1px;
+  margin-bottom: 5px;
+  border: 1px solid #918773;
+  border-radius: 1px;
+  padding: 1px 3px;
+  color: #918773;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 69, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+a.tag:hover {
+  border: 2px solid #991D08;
+  padding: 0px 2px;
+  color: #991D08;
+}
+
+/* line 75, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+.text-field-input {
+  width: 800px;
+  height: 20px;
+  font-size: 14px;
+  color: #4C493A;
+  padding: 5px;
+}
+
+/* line 83, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+.text-area-input {
+  width: 800px;
+  height: 300px;
+  font-size: 14px;
+  color: #4C493A;
+  padding: 5px;
+}
+
+/* line 91, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+.flash-errors {
+  color: #991D08;
+}
+
+/* line 95, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+div.field_with_errors {
+  display: inline;
+}
+
+/* line 99, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+.submit-button {
+  background-color: white;
+  text-decoration: none;
+  color: #4C493A;
+  border: 1px solid #4C493A;
+  border-radius: 2px;
+  font-family: "Armata", sans-serif;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* line 111, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+.align-right {
+  position: relative;
+  float: right;
+}
+
+/* line 116, /Users/kellyripple/clones/blog/app/assets/stylesheets/shared.css.scss */
+.delete {
+  color: #991D08;
+  border: 1px solid #991D08;
+}
+/* line 9, /Users/kellyripple/clones/blog/app/assets/stylesheets/user_sessions.css.scss */
+.login {
+  color: #420A1A;
+  border: 1px solid #420A1A;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #918773;
+  width: 40px;
+  margin: 0 auto;
+  padding: 10px;
+}
+/* line 9, /Users/kellyripple/clones/blog/app/assets/stylesheets/users.css.scss */
+img#headshot {
+  height: 100%;
+  width: auto;
+}
+
+/* line 14, /Users/kellyripple/clones/blog/app/assets/stylesheets/users.css.scss */
+div.circle-crop {
+  margin: 0 auto;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: black;
+  transform: rotate(22deg);
+  border: 2px solid black;
+}
+
+/* line 26, /Users/kellyripple/clones/blog/app/assets/stylesheets/users.css.scss */
+.pic-container {
+  margin: 0 auto;
+  height: 250px;
+  width: 250px;
+  padding: 40px 20px 0 20px;
+}
+
+/* line 34, /Users/kellyripple/clones/blog/app/assets/stylesheets/users.css.scss */
+#about a {
+  font-weight: bold;
+  color: #991D08;
+  text-decoration: none;
+}
+/* line 39, /Users/kellyripple/clones/blog/app/assets/stylesheets/users.css.scss */
+#about a:hover {
+  color: black;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
