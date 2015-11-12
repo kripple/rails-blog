@@ -4,8 +4,8 @@ class ProjectsController < ApplicationController
   before_action :find_project, only: [:edit, :update, :destroy]
 
 	def index
-		# @projects = Project.all.where(published: true).page(params[:page]).order(created_at: :desc)
-		# @unpublished = Project.all.where(published: false).page(params[:page]).order(created_at: :desc)
+		@projects = Project.published.paginate(:page => params[:page])
+    @unpublished = Project.unpublished.paginate(:page => params[:page])
 	end
 
 	def new

@@ -1,4 +1,4 @@
-module TagsHelper
+module TaggablesHelper
   def filter_url(tag)
     "/#{self.class.name.downcase}s/filter/#{tag.slug}"
   end

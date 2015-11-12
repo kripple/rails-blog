@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-	include TagsHelper
+	include TaggablesHelper
 
 	has_many :taggings, as: :taggable
 	has_many :tags, through: :taggings
@@ -9,15 +9,15 @@ class Post < ActiveRecord::Base
 
 	before_save :generate_slug
 
-	self.per_page = 6
+	self.per_page = 4
 
 	def self.published
-		self.where(published: true).order(created_at: :desc)
-	end
+    self.where(published: true).order(created_at: :desc)
+  end
 
-	def self.unpublished
-		self.where(published: false).order(created_at: :desc)
-	end
+  def self.unpublished
+    self.where(published: false).order(created_at: :desc)
+  end
 
 	def to_param
     slug
