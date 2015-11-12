@@ -1,5 +1,5 @@
 <div class="container">
-	<% if logged_in? && @unpublished.length > 0 %>
+	<% if logged_in? && @unpublished && @unpublished.length > 0 %>
 		<%= render @unpublished %>
 		<%= will_paginate @unpublished %>	
 	<% end %>
