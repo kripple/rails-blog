@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   post 'users/sessions' => 'user_sessions#create'
   delete 'logout' => 'user_sessions#destroy'
 
-  post 'posts/filter/:slug' => 'posts#filter'
-  post 'projects/filter/:slug' => 'projects#filter'
+  get 'posts/filter/:slug' => 'posts#filter'
+  get 'projects/filter/:slug' => 'projects#filter'
   
   resources :users, only: [:update]
   resources :posts

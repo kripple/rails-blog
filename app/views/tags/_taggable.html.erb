@@ -1,5 +1,5 @@
 <% taggable.tags.each do |tag| %>
-	<%= link_to(tag.name, taggable.filter_url(tag), method: :post, :class=>"filter tag") %>
+	<%= link_to(tag.name, taggable.filter_url(tag), :class=>"filter tag") %>
 <% end %>
 
 
