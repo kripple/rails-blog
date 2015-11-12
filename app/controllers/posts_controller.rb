@@ -35,7 +35,7 @@ class PostsController < ApplicationController
   def update
     if @post.update_attributes(post_params) 
       @post.add_tags(params[:tag][:ids])
-      redirect_to :posts
+      redirect_to :post
     else
       flash[:errors] = @post.errors.full_messages
       render :edit
