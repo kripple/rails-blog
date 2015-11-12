@@ -4,6 +4,9 @@
 	<p class="body"><%=@post.body.html_safe%></p>
 	<br>
 	<%= render "tags/taggable", taggable: @post %>
+	<% if logged_in? %>
+		<%= link_to("Edit Post", edit_post_path(@post), :class=>"submit-button") %>
+	<% end %>
 </div>
 
 
