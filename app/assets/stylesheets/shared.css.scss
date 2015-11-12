@@ -10,6 +10,10 @@ $red: #991D08;
 $body-font: 'Armata', sans-serif;
 $header-font: 'Cinzel', serif;
 
+p {
+	line-height: 50%;
+}
+
 .round {
 	border-radius: 5px;
 }
