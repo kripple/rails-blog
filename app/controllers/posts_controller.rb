@@ -43,7 +43,7 @@ class PostsController < ApplicationController
   end
 
   def filter
-    posts = Post.where(published: true).order(created_at: :desc)
+    posts = Post.published.paginate(:page => params[:page])
     @posts = posts.joins(:tags).where(:tags=> {:slug=>params[:slug]})
     render :index
   end
