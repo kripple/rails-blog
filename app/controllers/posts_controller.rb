@@ -4,8 +4,8 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.all.where(published: true).order(created_at: :desc)
-    @unpublished = Post.all.where(published: false).order(created_at: :desc) 
+    @posts = Post.published.paginate(:page => params[:page])
+    @unpublished = Post.unpublished.paginate(:page => params[:page])
   end
 
   def show

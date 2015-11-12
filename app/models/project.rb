@@ -9,6 +9,8 @@ class Project < ActiveRecord::Base
 
 	before_save :generate_slug
 
+	self.per_page = 10
+
 	def to_param
     slug
   end

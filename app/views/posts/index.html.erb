@@ -1,10 +1,18 @@
 <div class="container">
-	<%= render @unpublished if logged_in? && @unpublished.length > 0 %>
+
+	<% if logged_in? && @unpublished.length > 0 %>
+		<%= render @unpublished %>
+		<%= will_paginate @unpublished %>	
+	<% end %>
+
 	<%= render @posts %>
+	<%= will_paginate @posts %>
+
   <% if logged_in? %>
     <br>
 		<p><%= link_to("New Post", new_post_path, :class=>"submit-button") %></p>
   <% end %>
+
 </div>
 
 
