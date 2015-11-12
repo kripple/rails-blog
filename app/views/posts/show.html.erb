@@ -5,7 +5,8 @@
 	<br>
 	<%= render "tags/taggable", taggable: @post %>
 	<% if logged_in? %>
-		<br><%= link_to("Edit Post", edit_post_path(@post), :class=>"submit-button") %>
+		<div class="spacer"></div>
+		<%= link_to("Edit Post", edit_post_path(@post), :class=>"submit-button") %>
 	<% end %>
 </div>
 
