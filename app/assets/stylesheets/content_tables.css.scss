@@ -1,0 +1,13 @@
+table{
+	border-collapse: collapse;
+}
+td.first-column {
+	width: 20%;
+}
+tr {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+tr, td {
+	padding: 10px;
+}
