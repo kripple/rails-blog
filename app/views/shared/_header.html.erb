@@ -1,20 +1,34 @@
 <header id="header">
-	<nav>
-		<% if logged_in? %>
-			<%= link_to("about", :root) %>
-			<%= link_to("posts", :posts) %>
-			<%= link_to("projects", :projects) %>
-	    <%= link_to("tags", new_tag_path) %>
-	  <% else %>
-		  <%= link_to("about", :root) %>
-			<%= link_to("blog", :posts) %>
-			<%= link_to("projects", :projects) %>
-	    <%= link_to("resume", "/resume.pdf", :target => "_blank") %>
-	  <% end %>
-	</nav>
+	<div class="contain-to-grid sticky">
+	  <nav class="top-bar" data-topbar role="navigation">
+	  	<div class="show-for-medium-up">
+		  <% if logged_in? %>
+				<%= link_to("about", :root) %>
+				<%= link_to("posts", :posts) %>
+				<%= link_to("projects", :projects) %>
+		    <%= link_to("tags", new_tag_path) %>
+		  <% else %>
+			  <%= link_to("about", :root) %>
+				<%= link_to("blog", :posts) %>
+				<%= link_to("projects", :projects) %>
+		    <%= link_to("resume", "/resume.pdf", :target => "_blank") %>
+		  <% end %>  
+		  </div>
+
+		  <div class="show-for-small-only">
+
+		  <ul class="menu-bar">
+			<li><a href="#">Item</a></li>
+			<li><a href="#">Item</a></li>
+			<li><a href="#">Item</a></li>
+			</ul>
+
+			</div>
+
+	  </nav>
+	</div>
+
 	<% if flash[:login_error] %>
 		<p class="login-error"><%= flash[:login_error] %></p>
 	<% end %>
 </header>
-
-
