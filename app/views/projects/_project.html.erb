@@ -1,12 +1,12 @@
 <div class="index-container">
 	<% if logged_in? %>
 		<% if !project.published %>
-			<h1 class="project title">DRAFT: <%= link_to(project.title, edit_project_path(project)) %></h1>
+			<h3 class="project title">DRAFT: <%= link_to(project.title, edit_project_path(project)) %></h3>
 		<% else %>
-			<h1 class="project title"><%= link_to(project.title, edit_project_path(project)) %></h1>
+			<h3 class="project title"><%= link_to(project.title, edit_project_path(project)) %></h3>
 		<% end %>
 	<% else %>
-		<h1 class="project title"><%= link_to(project.title, project.url) %></h1>
+		<h3 class="project title"><%= link_to(project.title, project.url) %></h3>
 	<% end %>
 
 	<% if project.source && project.source.length > 0 %>

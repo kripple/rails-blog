@@ -1,12 +1,12 @@
 <div class="index-container">
 	<% if logged_in? %>
 		<% if !post.published %>
-			<h1 class="title">DRAFT: <%= link_to(post.title, edit_post_path(post)) %></h1>
+			<h3 class="title">DRAFT: <%= link_to(post.title, edit_post_path(post)) %></h3>
 		<% else %>
-			<h1 class="title"><%= link_to(post.title, edit_post_path(post) ) %></h1>
+			<h3 class="title"><%= link_to(post.title, edit_post_path(post) ) %></h3>
 		<% end %>
 	<% else %>
-		<h1 class="title"><%= link_to(post.title, post_path(post) ) %></h1>
+		<h3 class="title"><%= link_to(post.title, post_path(post) ) %></h3>
 	<% end %>
 	<p><%=post.description%> | <%=post.date%></p>
 
