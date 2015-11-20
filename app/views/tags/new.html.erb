@@ -2,7 +2,7 @@
 	<%= form_for @tag do |f| %>
 		<%= hidden_field( :tag, :id ) %>
 
-		<p><%= f.label :name, "Tag" %>: </p>
+		<p><%= f.label :name, "Tag: " %></p>
 		<p><%= f.text_field :name, :value=>@tag.name, :class=>"text-field-input" %></p>
 
 		<br>
