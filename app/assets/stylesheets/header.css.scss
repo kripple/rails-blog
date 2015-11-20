@@ -7,28 +7,11 @@ $charcoal: #4C493A;
 $red: #991D08;
 
 #header {
-	// left: 0;
-	// right: 0;
-	// top: 0;
-  // height: 40px;
-  // background-color: $wine;
   box-shadow: 2px 2px 5px $dark-beige;
-	// position: fixed;
 	font-family: 'Cinzel', serif;
 	font-size: 20px;
-	// padding-top: 10px;
 	z-index: 40;
 }
-
-// .header-dropdown {
-// 	// width: 100%;
-// 	div, a {
-// 		text-align: center;
-// 		padding-left: 0;
-// 		padding-right: 0;
-// 		width: 100%;
-// 	}
-// }
 
 #header a {
 	z-index: -50;
@@ -49,7 +32,6 @@ $red: #991D08;
 #header > nav > a {
 	display: inline-block;
   width: 24%;
-  // text-align: center;
   white-space: nowrap;
 }
 
@@ -67,7 +49,6 @@ $red: #991D08;
 }
 
 .menu-icon, .top-bar-section {
-// 	color: $light-beige;
 	z-index: 60;
 	cursor: pointer;
 	white-space: nowrap;
