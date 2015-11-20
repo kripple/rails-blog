@@ -29,10 +29,11 @@ $red: #991D08;
   margin: 0 auto;
 }
 
-#header > nav > a {
+.desktop-links {
 	display: inline-block;
   width: 24%;
   white-space: nowrap;
+  text-align: center;
 }
 
 .login-error {

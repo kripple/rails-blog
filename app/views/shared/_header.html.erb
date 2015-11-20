@@ -3,27 +3,26 @@
 		<nav class="top-bar" data-topbar role="navigation">
   		<div class="show-for-medium-up">
 			  <% if logged_in? %>
-					<%= link_to("about", :root) %>
-					<%= link_to("posts", :posts) %>
-					<%= link_to("projects", :projects) %>
-			    <%= link_to("tags", new_tag_path) %>
+					<%= link_to("about", :root, :class=>"desktop-links", :class=>"desktop-links") %>
+					<%= link_to("posts", :posts, :class=>"desktop-links") %>
+					<%= link_to("projects", :projects, :class=>"desktop-links") %>
+			    <%= link_to("tags", new_tag_path, :class=>"desktop-links") %>
 			  <% else %>
-				  <%= link_to("about", :root) %>
-					<%= link_to("blog", :posts) %>
-					<%= link_to("projects", :projects) %>
-			    <%= link_to("resume", "/resume.pdf", :target => "_blank") %>
+				  <%= link_to("about", :root, :class=>"desktop-links") %>
+					<%= link_to("blog", :posts, :class=>"desktop-links") %>
+					<%= link_to("projects", :projects, :class=>"desktop-links") %>
+			    <%= link_to("resume", "/resume.pdf", :target => "_blank", :class=>"desktop-links") %>
 			  <% end %>  
 	  	</div>
-		  <div class="show-for-small-only">
 
-			  <ul class="title-area">
+		  <div class="show-for-small-only">
+			  <ul class="title-area show-for-small-only">
 			    <li class="name"><a href="#"><span>
 			    	<%= link_to image_tag("home.png"), root_path, :class=>"home-icon" %>
 			    </span></a></li>
 			    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 			  </ul>
-
-			  <section class="top-bar-section">
+			  <section class="top-bar-section show-for-small-only">
 			    <ul class="right">
 			      <% if logged_in? %>
 							<%= link_to("posts", :posts, :class=>"mobile-links") %>
@@ -36,8 +35,8 @@
 					  <% end %>  
 			    </ul>
 			  </section>
-
 			</div>
+
 		</nav>
 	</div>
 
