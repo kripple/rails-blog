@@ -4,8 +4,8 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.published.paginate(:page => params[:page])
-    @unpublished = Post.unpublished.paginate(:page => params[:page])
+    @posts = Post.published
+    @unpublished = Post.unpublished
   end
 
   def show
@@ -43,7 +43,7 @@ class PostsController < ApplicationController
   end
 
   def filter
-    posts = Post.published.paginate(:page => params[:page])
+    posts = Post.published
     @posts = posts.joins(:tags).where(:tags=> {:slug=>params[:slug]})
     render :index
   end

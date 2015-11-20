@@ -4,8 +4,8 @@ class ProjectsController < ApplicationController
   before_action :find_project, only: [:edit, :update, :destroy]
 
 	def index
-		@projects = Project.published.paginate(:page => params[:page])
-    @unpublished = Project.unpublished.paginate(:page => params[:page])
+		@projects = Project.published
+    @unpublished = Project.unpublished
 	end
 
 	def new
@@ -34,7 +34,7 @@ class ProjectsController < ApplicationController
   end
 
 	def filter
-    projects = Project.published.paginate(:page => params[:page])
+    projects = Project.published
     @projects = projects.joins(:tags).where(:tags=> {:slug=>params[:slug]})
     render :index
   end

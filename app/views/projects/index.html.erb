@@ -1,11 +1,9 @@
 <div class="container">
 	<% if logged_in? && @unpublished && @unpublished.length > 0 %>
 		<%= render @unpublished %>
-		<%= will_paginate @unpublished %>	
 	<% end %>
 
 	<%= render @projects %>
-	<%= will_paginate @projects %>
 
   <% if logged_in? %>
     <br>

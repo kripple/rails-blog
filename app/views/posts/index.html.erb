@@ -2,11 +2,9 @@
 
 	<% if logged_in? && @unpublished && @unpublished.length > 0 %>
 		<%= render @unpublished %>
-		<%= will_paginate @unpublished %>	
 	<% end %>
 
 	<%= render @posts %>
-	<%= will_paginate @posts %>
 
   <% if logged_in? %>
     <br>

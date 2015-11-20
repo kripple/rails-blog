@@ -9,8 +9,6 @@ class Post < ActiveRecord::Base
 
 	before_save :generate_slug
 
-	self.per_page = 6
-
 	def self.published
     self.where(published: true).order(created_at: :desc)
   end
