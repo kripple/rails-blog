@@ -1,6 +1,7 @@
 <div class="container">
   <h3 class="title"><%=@post.title%></h3>
 	<p class="date"><%=@post.date%></p>
+	<div class="tiny-spacer"></div>
 	<p class="body"><%=@post.body.html_safe%></p>
 	<br>
 	<%= render "tags/taggable", taggable: @post %>
@@ -9,5 +10,6 @@
 		<%= link_to("Edit Post", edit_post_path(@post), :class=>"submit-button") %>
 	<% end %>
 </div>
+
 
 
