@@ -1,34 +1,56 @@
 <header id="header">
 	<div class="contain-to-grid sticky">
-	  <nav class="top-bar" data-topbar role="navigation">
-	  	<div class="show-for-medium-up">
-		  <% if logged_in? %>
-				<%= link_to("about", :root) %>
-				<%= link_to("posts", :posts) %>
-				<%= link_to("projects", :projects) %>
-		    <%= link_to("tags", new_tag_path) %>
-		  <% else %>
-			  <%= link_to("about", :root) %>
-				<%= link_to("blog", :posts) %>
-				<%= link_to("projects", :projects) %>
-		    <%= link_to("resume", "/resume.pdf", :target => "_blank") %>
-		  <% end %>  
-		  </div>
+		<nav class="top-bar" data-topbar role="navigation">
+  		<div class="show-for-medium-up">
+			  <% if logged_in? %>
+					<%= link_to("about", :root) %>
+					<%= link_to("posts", :posts) %>
+					<%= link_to("projects", :projects) %>
+			    <%= link_to("tags", new_tag_path) %>
+			  <% else %>
+				  <%= link_to("about", :root) %>
+					<%= link_to("blog", :posts) %>
+					<%= link_to("projects", :projects) %>
+			    <%= link_to("resume", "/resume.pdf", :target => "_blank") %>
+			  <% end %>  
+	  	</div>
+		  <div class="show-for-small-only header-dropdown">
 
-		  <div class="show-for-small-only">
+			  <ul class="title-area">
+			    <li class="name"><a href="#"><span>
+			    	<%= link_to image_tag("home.png"), root_path, :class=>"home-icon" %>
+			    </span></a></li>
+			    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+			  </ul>
 
-		  <ul class="menu-bar">
-			<li><a href="#">Item</a></li>
-			<li><a href="#">Item</a></li>
-			<li><a href="#">Item</a></li>
-			</ul>
+			  <section class="top-bar-section">
+			    <ul class="right">
+			      <% if logged_in? %>
+							<%= link_to("posts", :posts, :class=>"mobile-links") %>
+							<%= link_to("projects", :projects, :class=>"mobile-links") %>
+					    <%= link_to("tags", new_tag_path, :class=>"mobile-links") %>
+					  <% else %>
+							<%= link_to("blog", :posts, :class=>"mobile-links") %>
+							<%= link_to("projects", :projects, :class=>"mobile-links") %>
+					    <%= link_to("resume", "/resume.pdf", :target => "_blank", :class=>"mobile-links") %>
+					  <% end %>  
+			    </ul>
+			  </section>
 
 			</div>
-
-	  </nav>
+		</nav>
 	</div>
 
 	<% if flash[:login_error] %>
 		<p class="login-error"><%= flash[:login_error] %></p>
 	<% end %>
 </header>
+
+<div class="show-for-medium-up spacer"></div>
+<div class="show-for-small-only little-spacer"></div>
+
+
+
+
+
+

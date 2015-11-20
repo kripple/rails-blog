@@ -33,7 +33,7 @@ a:hover {
 	max-width: 800px;
 	min-width: 300px;
 	margin: 0 auto;
-	padding: 70px 8% 40px 8%;
+	padding: 10px 8% 40px 8%;
 	color: $charcoal;
 	font-family: $body-font;
 }
@@ -56,6 +56,10 @@ a:hover {
 
 .little-spacer {
 	padding: 10px;
+}
+
+.tiny-spacer {
+	padding: 5px;
 }
 
 .title a {
