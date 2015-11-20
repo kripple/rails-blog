@@ -7,6 +7,8 @@
 		<% end %>
 	<% else %>
 	  <%= @user.about.html_safe %>
+	  <div class="show-for-medium-up spacer"></div>
+		<div class="show-for-small-only little-spacer"></div>
 	  <div class="pic-container">
 	  	<div class="circle-crop">
 	  		<%= image_tag("headshot.png", :id => "headshot") %>

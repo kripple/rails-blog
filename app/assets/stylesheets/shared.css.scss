@@ -18,6 +18,7 @@ a {
 	font-weight: bold;
 	color: $red;
 	text-decoration: none;
+	transition: all 200ms ease;
 }
 
 a:hover {
@@ -32,7 +33,7 @@ a:hover {
 	max-width: 800px;
 	min-width: 300px;
 	margin: 0 auto;
-	padding: 70px 8% 40px 8%;
+	padding: 10px 8% 40px 8%;
 	color: $charcoal;
 	font-family: $body-font;
 }
@@ -55,6 +56,10 @@ a:hover {
 
 .little-spacer {
 	padding: 10px;
+}
+
+.tiny-spacer {
+	padding: 5px;
 }
 
 .title a {
@@ -82,6 +87,7 @@ a.tag {
 	color: $dark-beige;
 	text-decoration: none;
 	cursor: pointer;
+	transition: none;
 }
 
 a.tag:hover {
@@ -124,6 +130,12 @@ div.field_with_errors {
 	padding:8px;
 	cursor: pointer;
 	font-size: 14px;
+	transition: all 250ms ease;
+}
+.submit-button:hover {
+	color: white;
+	border: 1px solid $red;
+	background-color: $red;
 }
 
 .align-right {

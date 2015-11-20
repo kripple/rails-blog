@@ -7,16 +7,9 @@ $charcoal: #4C493A;
 $red: #991D08;
 
 #header {
-	left: 0;
-	right: 0;
-	top: 0;
-  height: 40px;
-  background-color: $wine;
   box-shadow: 2px 2px 5px $dark-beige;
-	position: fixed;
 	font-family: 'Cinzel', serif;
 	font-size: 20px;
-	padding-top: 10px;
 	z-index: 40;
 }
 
@@ -36,10 +29,9 @@ $red: #991D08;
   margin: 0 auto;
 }
 
-#header nav a {
+#header > nav > a {
 	display: inline-block;
   width: 24%;
-  text-align: center;
   white-space: nowrap;
 }
 
@@ -56,8 +48,26 @@ $red: #991D08;
   margin-top: 15%;
 }
 
+.menu-icon, .top-bar-section {
+	z-index: 60;
+	cursor: pointer;
+	white-space: nowrap;
+}
 
+.mobile-links {
+  display: block;
+  width: 100%;
+  border-top: 1px solid $charcoal;
+  text-align: center;
+  padding: 0.5em;
+}
 
+.home-icon {
+  background-color: white;
+  margin-left: 3%;
+  padding: 0.5% 1.7%;
+  border-radius: 50%;
+}
 
 
 
