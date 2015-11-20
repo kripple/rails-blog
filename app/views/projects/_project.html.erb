@@ -1,19 +1,28 @@
 <div class="index-container">
 	<% if logged_in? %>
+
 		<% if !project.published %>
-			<h3 class="project title">DRAFT: <%= link_to(project.title, edit_project_path(project)) %></h3>
+			<h3 class="project title">
+				DRAFT: <%= link_to(project.title, edit_project_path(project)) %> 
+				<%= link_to("[SOURCE]", project.source, :class=>"source") if project.source && project.source.length > 0 %>
+			</h3>
 		<% else %>
-			<h3 class="project title"><%= link_to(project.title, edit_project_path(project)) %></h3>
+			<h3 class="project title">
+				<%= link_to(project.title, edit_project_path(project)) %> 
+				<%= link_to("[SOURCE]", project.source, :class=>"source") if project.source && project.source.length > 0 %>
+			</h3>
 		<% end %>
+
 	<% else %>
-		<h3 class="project title"><%= link_to(project.title, project.url) %></h3>
+
+		<h3 class="project title">
+			<%= link_to(project.title, project.url) %> 
+			<%= link_to("[SOURCE]", project.source, :class=>"source") if project.source && project.source.length > 0 %>
+		</h3>
+
 	<% end %>
 
-	<% if project.source && project.source.length > 0 %>
-		<div class="source-container">
-			<%= link_to("[SOURCE]", project.source, :class=>"source") %>
-		</div>
-	<% end %>
+
 
 	<p><%=project.description%><% if project.date %> | <%=project.date%><% end %></p>
 

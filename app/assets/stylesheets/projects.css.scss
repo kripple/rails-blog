@@ -7,17 +7,10 @@ $charcoal: #4C493A;
 $red: #991D08;
 
 a.source {
-	font-weight: bold;
-	color: $red;
-	text-decoration: none;
-	font-size: 14px;
+	font-size: 0.6em;
 }
 
-a.source:hover {
-	color: black;
-}
-
-h1.project {
+.project {
 	display: inline-block;
 }
 
